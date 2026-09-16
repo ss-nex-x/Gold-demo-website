@@ -1,0 +1,568 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AURUM & CO. | Haute Joaillerie & High Fine Jewellery</title>
+  <meta name="description"
+    content="Immerse in the cinematic scroll experience of AURUM Haute Joaillerie. Handcrafted pure gold and diamond masterpieces born from master goldsmiths.">
+
+  <!-- Google Fonts: Luxury Editorial Serif & Modern Sans -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700;800&family=Cinzel+Decorative:wght@400;700&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Montserrat:wght@200;300;400;500;600&display=swap"
+    rel="stylesheet">
+
+  <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+
+  <!-- LUXURY PRELOADER -->
+  <div id="preloader" class="preloader">
+    <div class="preloader-content">
+      <div class="preloader-crest">
+        <svg viewBox="0 0 100 100" class="crest-svg">
+          <circle cx="50" cy="50" r="46" fill="none" stroke="url(#gold-grad-p)" stroke-width="1.2"
+            stroke-dasharray="4 6" />
+          <path d="M50 16 L54 36 L74 36 L58 48 L64 68 L50 56 L36 68 L42 48 L26 36 L46 36 Z" fill="none"
+            stroke="url(#gold-grad-p)" stroke-width="1.5" />
+          <defs>
+            <linearGradient id="gold-grad-p" x1="0%" y1="0%" x2="100%" y2="100%">
+              <stop offset="0%" stop-color="#FFF5D1" />
+              <stop offset="50%" stop-color="#D4AF37" />
+              <stop offset="100%" stop-color="#8F6B22" />
+            </linearGradient>
+          </defs>
+        </svg>
+      </div>
+      <div class="preloader-brand">AURUM &amp; CO.</div>
+      <div class="preloader-subtitle">HAUTE JOAILLERIE ATELIER</div>
+      <div class="preloader-bar-wrap">
+        <div id="preloader-bar" class="preloader-bar"></div>
+      </div>
+      <div class="preloader-status">
+        <span id="preloader-percent">0%</span>
+        <span class="preloader-note">Preparing 3D Cinematic Sequence</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- FIXED LUXURY NAVIGATION -->
+  <header id="navbar" class="navbar">
+    <div class="nav-container">
+      <div class="nav-left">
+        <button class="nav-btn menu-toggle" aria-label="Open Navigation">
+          <span class="menu-bar"></span>
+          <span class="menu-bar"></span>
+        </button>
+        <nav class="nav-links">
+          <a href="#collections" class="nav-link">High Jewellery</a>
+          <a href="#craftsmanship" class="nav-link">Craftsmanship</a>
+          <a href="#bespoke" class="nav-link">The Atelier</a>
+          <a href="#heritage" class="nav-link">Heritage</a>
+        </nav>
+      </div>
+
+      <a href="#" class="nav-brand">
+        <span class="brand-monogram">AURUM</span>
+        <span class="brand-origin">PARIS • GENÈVE • DUBAI</span>
+      </a>
+
+      <div class="nav-right">
+        <button class="nav-btn consultation-btn" onclick="openConsultationModal()">
+          <span class="btn-sparkle">✦</span>
+          <span class="btn-text">VIP APPOINTMENT</span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- ======================================================== -->
+  <!-- HERO SCROLL CONTAINER (550vh tall to drive 300 frames)   -->
+  <!-- ======================================================== -->
+  <section id="hero" class="hero-scroll-container">
+    <div id="hero-sticky" class="hero-sticky-viewport">
+
+      <!-- Background Ambient Glow & Vignette -->
+      <div class="hero-ambient-glow"></div>
+      <div class="hero-vignette"></div>
+
+      <!-- Canvas for Floating Gold Stardust Particles -->
+      <canvas id="particles-canvas" class="particles-canvas"></canvas>
+
+      <!-- Main High-Definition Canvas for 300 Frames -->
+      <canvas id="hero-canvas" class="hero-canvas"></canvas>
+
+      <!-- CINEMATIC TEXT OVERLAYS (Controlled by Frame ranges) -->
+      <div class="hero-overlay-layer">
+
+        <!-- Frame 001 - 060: TIMELESS -->
+        <div id="hero-text-1" class="hero-text-block">
+          <div class="gold-emboss-tag">HAUTE ORFEVRERIE</div>
+          <h1 class="hero-title">TIMELESS</h1>
+          <div class="gold-divider-line"></div>
+          <p class="hero-subtitle">Crafted for moments that matter.</p>
+        </div>
+
+        <!-- Frame 061 - 130: ELEGANCE -->
+        <div id="hero-text-2" class="hero-text-block">
+          <div class="gold-emboss-tag">PURE 24K ARCHITECTURE</div>
+          <h1 class="hero-title">ELEGANCE</h1>
+          <div class="gold-divider-line"></div>
+          <p class="hero-subtitle">Designed to shine beyond time.</p>
+        </div>
+
+        <!-- Frame 131 - 210: CRAFTED IN GOLD -->
+        <div id="hero-text-3" class="hero-text-block">
+          <div class="gold-emboss-tag">THE ALCHEMY OF LIGHT</div>
+          <h1 class="hero-title">CRAFTED IN GOLD</h1>
+          <div class="gold-divider-line"></div>
+          <p class="hero-subtitle">Where craftsmanship becomes art.</p>
+        </div>
+
+        <!-- Frame 211 - 270: MADE TO BE REMEMBERED -->
+        <div id="hero-text-4" class="hero-text-block">
+          <div class="gold-emboss-tag">SOLITAIRE MASTERPIECE</div>
+          <h1 class="hero-title">MADE TO BE REMEMBERED</h1>
+          <div class="gold-divider-line"></div>
+          <p class="hero-subtitle">Hand-sculpted brilliance for eternity.</p>
+        </div>
+
+      </div>
+
+      <!-- MINIMALIST LUXURY HUD -->
+      <div class="hero-hud">
+        <div class="hud-right">
+          <div class="purity-badge">
+            <span class="gold-seal">AU 999.9</span>
+            <span class="purity-text">24K SOLID GOLD</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- TRANSITION CUE TO MAIN WEBSITE (Visible near frame 300) -->
+      <div id="hero-transition-cue" class="hero-transition-cue">
+        <div class="glow-beam"></div>
+        <span class="transition-title">ENTERING THE MAISON</span>
+        <svg class="chevron-down" viewBox="0 0 24 24" width="20" height="20">
+          <path d="M7 10l5 5 5-5" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
+            stroke-linejoin="round" />
+        </svg>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ======================================================== -->
+  <!-- MAIN WEBSITE EXPERIENCE (Seamless luxury content flow)   -->
+  <!-- ======================================================== -->
+  <main id="main-content" class="main-content">
+
+    <!-- INTRO STATEMENT: LUXURY COMMERCIAL -> WEBSITE TRANSITION -->
+    <section class="intro-statement-section">
+      <div class="container-narrow">
+        <div class="section-crest">
+          <span class="crest-dot"></span>
+          <span class="crest-line"></span>
+          <span class="crest-text">THE ATELIER MANIFESTO</span>
+          <span class="crest-line"></span>
+          <span class="crest-dot"></span>
+        </div>
+        <h2 class="editorial-quote">
+          “True luxury is never loud. It whispers in the weight of pure gold, the silence of flawless diamonds, and the
+          soul of the master who shaped it.”
+        </h2>
+        <div class="artisan-signature">
+          <span class="signature-name">Jean-Luc Aurélien</span>
+          <span class="signature-role">Master Goldsmith &amp; Creative Director</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- HAUTE JOAILLERIE COLLECTIONS -->
+    <section id="collections" class="collections-section">
+      <div class="container">
+
+        <div class="section-header text-center">
+          <div class="gold-kicker">HAUTE SÉLECTION</div>
+          <h2 class="section-title">Iconic Creations</h2>
+          <p class="section-description">
+            Each creation requires over 120 hours of delicate goldsmithing, handset with conflict-free, certified
+            natural diamonds.
+          </p>
+
+          <!-- Category Filter Tabs -->
+          <div class="filter-tabs">
+            <button class="filter-btn active" data-filter="all">All Masterpieces</button>
+            <button class="filter-btn" data-filter="necklaces">Collars &amp; Pendants</button>
+            <button class="filter-btn" data-filter="rings">Solitaire Rings</button>
+            <button class="filter-btn" data-filter="bracelets">Sculpted Cuffs</button>
+          </div>
+        </div>
+
+        <!-- Product Grid -->
+        <div class="products-grid">
+
+          <!-- Product Card 1 -->
+          <div class="product-card" data-category="necklaces">
+            <div class="card-image-wrap">
+              <div class="gold-badge">SIGNATURE</div>
+              <div class="card-media-placeholder collar-art">
+                <div class="art-shimmer"></div>
+                <div class="card-glow"></div>
+                <span class="card-icon">✦</span>
+              </div>
+              <div class="card-actions">
+                <button class="quick-view-btn"
+                  onclick="openProductModal('L’Éclipse Solaire Necklace', '$48,500', 'Handcrafted 18k Rose Gold with 4.80 ct Pavé Diamonds', 'necklace')">Quick
+                  View</button>
+              </div>
+            </div>
+            <div class="card-details">
+              <span class="card-category">HAUTE COLLAR</span>
+              <h3 class="card-title">L’Éclipse Solaire</h3>
+              <p class="card-specs">18K Honey Gold • 4.80 ct VVS Diamonds</p>
+              <div class="card-price">$48,500</div>
+            </div>
+          </div>
+
+          <!-- Product Card 2 -->
+          <div class="product-card" data-category="rings">
+            <div class="card-image-wrap">
+              <div class="gold-badge">BESPOKE</div>
+              <div class="card-media-placeholder ring-art">
+                <div class="art-shimmer"></div>
+                <div class="card-glow"></div>
+                <span class="card-icon">◆</span>
+              </div>
+              <div class="card-actions">
+                <button class="quick-view-btn"
+                  onclick="openProductModal('Le Solitaire Impérial Ring', '$62,000', '24k Pure Gold Architecture with 3.20 ct D-Flawless Center Emerald Cut', 'ring')">Quick
+                  View</button>
+              </div>
+            </div>
+            <div class="card-details">
+              <span class="card-category">SOLITAIRE COLLECTION</span>
+              <h3 class="card-title">Le Solitaire Impérial</h3>
+              <p class="card-specs">24K Solid Gold • 3.20 ct D-Flawless</p>
+              <div class="card-price">$62,000</div>
+            </div>
+          </div>
+
+          <!-- Product Card 3 -->
+          <div class="product-card" data-category="bracelets">
+            <div class="card-image-wrap">
+              <div class="gold-badge">LIMITED EDITION</div>
+              <div class="card-media-placeholder cuff-art">
+                <div class="art-shimmer"></div>
+                <div class="card-glow"></div>
+                <span class="card-icon">◉</span>
+              </div>
+              <div class="card-actions">
+                <button class="quick-view-btn"
+                  onclick="openProductModal('Sovereign Fluted Cuff', '$34,200', 'Solid 22k Sculpted Yellow Gold Cuff with Florentine Finish', 'bracelet')">Quick
+                  View</button>
+              </div>
+            </div>
+            <div class="card-details">
+              <span class="card-category">SCULPTED CUFF</span>
+              <h3 class="card-title">Sovereign Fluted Cuff</h3>
+              <p class="card-specs">22K Hand-Chiseled Gold • Florentine Texture</p>
+              <div class="card-price">$34,200</div>
+            </div>
+          </div>
+
+          <!-- Product Card 4 -->
+          <div class="product-card" data-category="rings">
+            <div class="card-image-wrap">
+              <div class="gold-badge">ONE OF A KIND</div>
+              <div class="card-media-placeholder eternity-art">
+                <div class="art-shimmer"></div>
+                <div class="card-glow"></div>
+                <span class="card-icon">◈</span>
+              </div>
+              <div class="card-actions">
+                <button class="quick-view-btn"
+                  onclick="openProductModal('Aeterna Pavé Band', '$21,800', 'Continuous Band of French Cut Diamonds in Platinum and 18K Yellow Gold', 'ring')">Quick
+                  View</button>
+              </div>
+            </div>
+            <div class="card-details">
+              <span class="card-category">ETERNITY BAND</span>
+              <h3 class="card-title">Aeterna Pavé Band</h3>
+              <p class="card-specs">18K Dual Gold • French Cut Diamonds</p>
+              <div class="card-price">$21,800</div>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- MASTER CRAFTSMANSHIP & ATELIER HERITAGE -->
+    <section id="craftsmanship" class="craftsmanship-section">
+      <div class="container">
+
+        <div class="craftsmanship-grid">
+
+          <div class="craft-content">
+            <div class="gold-kicker">METIER D'ART</div>
+            <h2 class="section-title">The Art of Lost-Wax Goldsmithing</h2>
+            <p class="craft-lead">
+              Every AURUM piece begins not on a computer screen, but in pure hand-carved jeweler's wax.
+            </p>
+            <p class="craft-text">
+              Our master goldsmiths shape organic contours, testing weight and ergonomic balance against the human form.
+              When molten gold at 1,064°C replaces the wax, a seamless sculptural jewel emerges—free of soldering seams
+              and imbued with immortal warmth.
+            </p>
+
+            <!-- Interactive Pillars -->
+            <div class="craft-pillars">
+              <div class="pillar-item">
+                <div class="pillar-number">01</div>
+                <div class="pillar-info">
+                  <h4>Ethical Fairmined Gold</h4>
+                  <p>100% traceable, sustainably extracted precious metals refined to 999.9 purity.</p>
+                </div>
+              </div>
+
+              <div class="pillar-item">
+                <div class="pillar-number">02</div>
+                <div class="pillar-info">
+                  <h4>Florentine Hand Chasing</h4>
+                  <p>Microscopic incisions hand-graved with tempered steel burins for velvet light refraction.</p>
+                </div>
+              </div>
+
+              <div class="pillar-item">
+                <div class="pillar-number">03</div>
+                <div class="pillar-info">
+                  <h4>Micro-Pavé Setting</h4>
+                  <p>Gems set under 40x stereoscopic magnification with mirror-polished claw tips.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="craft-visual">
+            <div class="visual-frame">
+              <div class="visual-badge">EST. 1928 • VALENZA</div>
+              <div class="visual-art-display">
+                <div class="goldsmith-crucible">
+                  <div class="molten-core"></div>
+                  <div class="gold-sparkles"></div>
+                </div>
+                <div class="visual-quote">
+                  <span class="v-quote-mark">“</span>
+                  Gold is sunlight distilled into earthly permanence.
+                </div>
+              </div>
+              <div class="gold-metrics">
+                <div class="metric">
+                  <span class="m-val">100%</span>
+                  <span class="m-label">Certified Recycled Gold</span>
+                </div>
+                <div class="metric">
+                  <span class="m-val">120h</span>
+                  <span class="m-label">Handwork Per Piece</span>
+                </div>
+                <div class="metric">
+                  <span class="m-val">VVS1</span>
+                  <span class="m-label">Minimum Gem Clarity</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- BESPOKE APPOINTMENT & VIP CONCIERGE -->
+    <section id="bespoke" class="bespoke-section">
+      <div class="container">
+        <div class="bespoke-card">
+          <div class="bespoke-inner">
+            <div class="gold-kicker">HAUTE SUR MESURE</div>
+            <h2 class="section-title">Schedule a Private Atelier Viewing</h2>
+            <p class="bespoke-desc">
+              Whether you desire a bespoke high jewellery commission or an intimate presentation in our private salon,
+              our master jewelers are at your disposal.
+            </p>
+
+            <form class="bespoke-form" onsubmit="handleConsultationSubmit(event)">
+              <div class="form-row">
+                <div class="form-group">
+                  <label for="b-name">FULL NAME</label>
+                  <input type="text" id="b-name" required placeholder="e.g. Lady Vivienne Montgomery">
+                </div>
+                <div class="form-group">
+                  <label for="b-email">EMAIL ADDRESS</label>
+                  <input type="email" id="b-email" required placeholder="name@domain.com">
+                </div>
+              </div>
+
+              <div class="form-row">
+                <div class="form-group">
+                  <label for="b-location">PREFERRED SALON</label>
+                  <select id="b-location">
+                    <option value="paris">Paris — Place Vendôme</option>
+                    <option value="geneve">Genève — Rue du Rhône</option>
+                    <option value="london">London — New Bond Street</option>
+                    <option value="newyork">New York — 5th Avenue</option>
+                    <option value="dubai">Dubai — DIFC Private Salon</option>
+                  </select>
+                </div>
+                <div class="form-group">
+                  <label for="b-interest">INTEREST</label>
+                  <select id="b-interest">
+                    <option value="bespoke">Bespoke Custom Commission</option>
+                    <option value="collection">Private Viewing of High Collection</option>
+                    <option value="bridal">Haute Bridal &amp; Solitaires</option>
+                  </select>
+                </div>
+              </div>
+
+              <button type="submit" class="submit-bespoke-btn">
+                <span>REQUEST PRIVATE CONSULTATION</span>
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- PRESS & ACCOLADES -->
+    <section class="press-section">
+      <div class="container">
+        <div class="press-track">
+          <div class="press-item">
+            <span class="press-quote">“The pinnacle of gold sculpture in modern fine jewellery.”</span>
+            <span class="press-logo">VOGUE HAUTE HORLOGERIE</span>
+          </div>
+          <div class="press-item">
+            <span class="press-quote">“AURUM has redefined how precious metal interacts with light.”</span>
+            <span class="press-logo">HARPER'S BAZAAR</span>
+          </div>
+          <div class="press-item">
+            <span class="press-quote">“A masterclass in quiet, sovereign architectural luxury.”</span>
+            <span class="press-logo">ROBB REPORT</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- LUXURY BRAND FOOTER -->
+  <footer class="site-footer">
+    <div class="container">
+
+      <div class="footer-top">
+        <div class="footer-brand-col">
+          <div class="footer-brand">AURUM &amp; CO.</div>
+          <p class="footer-tagline">
+            Sovereign high jewellery crafted in perpetual gold. Designed in Paris, forged in Valenza.
+          </p>
+          <div class="purity-seal-small">
+            <span class="seal-icon">✦</span>
+            <span>RESPONSIBLE JEWELLERY COUNCIL CERTIFIED</span>
+          </div>
+        </div>
+
+        <div class="footer-links-col">
+          <h4 class="footer-col-title">THE MAISON</h4>
+          <ul class="footer-links">
+            <li><a href="#collections">High Jewellery</a></li>
+            <li><a href="#craftsmanship">Master Goldsmiths</a></li>
+            <li><a href="#bespoke">Bespoke Commissions</a></li>
+            <li><a href="#">The Heritage Archive</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-links-col">
+          <h4 class="footer-col-title">SALONS</h4>
+          <ul class="footer-links">
+            <li><span>Place Vendôme, Paris</span></li>
+            <li><span>Rue du Rhône, Genève</span></li>
+            <li><span>New Bond St, London</span></li>
+            <li><span>5th Avenue, New York</span></li>
+            <li><span>DIFC, Dubai</span></li>
+          </ul>
+        </div>
+
+        <div class="footer-newsletter-col">
+          <h4 class="footer-col-title">PRIVATE REGISTER</h4>
+          <p class="newsletter-desc">Receive intimate invitations to private viewings and new limited creations.</p>
+          <form class="newsletter-form"
+            onsubmit="event.preventDefault(); alert('You have been enrolled in the Aurum Private Registry.');">
+            <input type="email" placeholder="Enter your email" required class="newsletter-input">
+            <button type="submit" class="newsletter-btn">JOIN</button>
+          </form>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p class="copyright">© 2026 AURUM &amp; CO. ALL RIGHTS RESERVED. CRAFTED IN GOLD.</p>
+        <div class="footer-legal">
+          <a href="#">Confidentiality</a>
+          <a href="#">Provenance</a>
+          <a href="#">Ethical Sourcing</a>
+        </div>
+      </div>
+
+    </div>
+  </footer>
+
+  <!-- QUICK VIEW MODAL -->
+  <div id="product-modal" class="modal-backdrop">
+    <div class="modal-card">
+      <button class="modal-close" onclick="closeProductModal()">&times;</button>
+      <div class="modal-body">
+        <div class="modal-media">
+          <div id="modal-art-box" class="modal-art-box">
+            <div class="art-shimmer"></div>
+            <div class="modal-gem-icon">✦</div>
+          </div>
+        </div>
+        <div class="modal-info">
+          <span class="gold-emboss-tag">HAUTE PIECE</span>
+          <h2 id="modal-title" class="modal-title">L’Éclipse Solaire</h2>
+          <div id="modal-price" class="modal-price">$48,500</div>
+          <div class="gold-divider-line" style="margin: 16px 0;"></div>
+          <p id="modal-desc" class="modal-desc">
+            Handcrafted in 18k solid gold with brilliant round cut conflict-free natural diamonds.
+          </p>
+          <div class="modal-specs">
+            <div class="spec-row">
+              <span class="spec-label">Metal:</span>
+              <span class="spec-value">18K / 24K Solid Aurum</span>
+            </div>
+            <div class="spec-row">
+              <span class="spec-label">Hallmark:</span>
+              <span class="spec-value">French Eagle's Head &amp; Italian 750</span>
+            </div>
+            <div class="spec-row">
+              <span class="spec-label">Delivery:</span>
+              <span class="spec-value">Insured Courier in Hand-Polished Walnut Box</span>
+            </div>
+          </div>
+          <button class="modal-action-btn"
+            onclick="alert('Our concierge will reach out to facilitate your private acquisition.'); closeProductModal();">
+            ACQUIRE THIS MASTERPIECE
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script type="module" src="./main.js"></script>
+</body>
+
+</html>
