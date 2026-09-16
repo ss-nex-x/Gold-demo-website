@@ -1,0 +1,21 @@
+{
+  "buildCommand": "npm run build",
+  "outputDirectory": "dist",
+  "rewrites": [
+    {
+      "source": "/ezgif/:path*",
+      "destination": "/ezgif-27fd5a89d62bf8c0-png-split/:path*"
+    }
+  ],
+  "headers": [
+    {
+      "source": "/ezgif-27fd5a89d62bf8c0-png-split/(.*)",
+      "headers": [
+        {
+          "key": "Cache-Control",
+          "value": "public, max-age=31536000, immutable"
+        }
+      ]
+    }
+  ]
+}
