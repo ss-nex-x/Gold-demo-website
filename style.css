@@ -1487,9 +1487,210 @@ body {
 }
 
 /* ==========================================================================
-   RESPONSIVE DESIGN
+   MOBILE MENU DRAWER & RESPONSIVE DESIGN
+   ========================================================================== */
+
+.btn-text-mobile {
+  display: none;
+}
+
+/* Mobile Menu Drawer */
+.mobile-menu-drawer {
+  position: fixed;
+  inset: 0;
+  z-index: 99999;
+  visibility: hidden;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.35s ease, visibility 0.35s ease;
+}
+
+.mobile-menu-drawer.active {
+  visibility: visible;
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.mobile-menu-backdrop {
+  position: absolute;
+  inset: 0;
+  background: rgba(4, 4, 6, 0.88);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+}
+
+.mobile-menu-panel {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 86%;
+  max-width: 340px;
+  height: 100%;
+  height: 100dvh;
+  background: linear-gradient(180deg, #111116 0%, #070709 100%);
+  border-right: 1px solid var(--gold-border);
+  box-shadow: 10px 0 45px rgba(0, 0, 0, 0.85);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 30px 24px;
+  transform: translateX(-100%);
+  transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+  overflow-y: auto;
+  z-index: 2;
+}
+
+.mobile-menu-drawer.active .mobile-menu-panel {
+  transform: translateX(0);
+}
+
+.mobile-menu-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-bottom: 22px;
+  border-bottom: 1px solid var(--gold-dim);
+}
+
+.mobile-brand {
+  display: flex;
+  flex-direction: column;
+}
+
+.mobile-brand .brand-monogram {
+  font-size: 1.4rem;
+  letter-spacing: 0.3em;
+  line-height: 1;
+}
+
+.mobile-brand .brand-origin {
+  font-size: 0.5rem;
+  letter-spacing: 0.25em;
+  color: var(--gold-pure);
+  opacity: 0.8;
+  margin-top: 3px;
+}
+
+.mobile-close-btn {
+  background: none;
+  border: 1px solid var(--gold-dim);
+  color: var(--gold-champagne);
+  font-size: 1.5rem;
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+  line-height: 1;
+}
+
+.mobile-close-btn:hover {
+  border-color: var(--gold-pure);
+  color: #fff;
+  transform: rotate(90deg);
+}
+
+.mobile-menu-nav {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  padding: 28px 0;
+}
+
+.mobile-nav-link {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  text-decoration: none;
+  color: var(--text-primary);
+  font-family: var(--font-serif-title);
+  font-size: 1.05rem;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  padding: 12px 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.04);
+  transition: all 0.3s ease;
+}
+
+.m-link-num {
+  font-size: 0.72rem;
+  color: var(--gold-pure);
+  letter-spacing: 0.1em;
+  opacity: 0.75;
+}
+
+.mobile-nav-link:hover {
+  color: var(--gold-light);
+  transform: translateX(8px);
+}
+
+.mobile-menu-footer {
+  padding-top: 24px;
+  border-top: 1px solid var(--gold-dim);
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.mobile-vip-btn {
+  width: 100%;
+  background: linear-gradient(135deg, #D4AF37 0%, #FFF4D2 50%, #8F6A22 100%);
+  color: #070708;
+  border: none;
+  padding: 14px 20px;
+  border-radius: 50px;
+  font-family: var(--font-serif-title);
+  font-size: 0.72rem;
+  letter-spacing: 0.22em;
+  font-weight: 700;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  box-shadow: 0 4px 20px rgba(212, 175, 55, 0.35);
+  transition: all 0.3s ease;
+}
+
+.mobile-vip-btn:hover {
+  box-shadow: 0 4px 28px rgba(212, 175, 55, 0.6);
+  transform: translateY(-2px);
+}
+
+.mobile-menu-meta {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.m-cities {
+  font-size: 0.56rem;
+  letter-spacing: 0.25em;
+  color: var(--gold-champagne);
+}
+
+.m-seal {
+  font-size: 0.5rem;
+  letter-spacing: 0.3em;
+  color: var(--text-muted);
+}
+
+/* ==========================================================================
+   TABLET RESPONSIVENESS (max-width: 1024px)
    ========================================================================== */
 @media (max-width: 1024px) {
+  .navbar {
+    padding: 18px 28px;
+  }
+
+  .nav-links {
+    gap: 20px;
+  }
+
   .craftsmanship-grid {
     grid-template-columns: 1fr;
     gap: 48px;
@@ -1497,6 +1698,7 @@ body {
 
   .footer-top {
     grid-template-columns: 1fr 1fr;
+    gap: 40px;
   }
 
   .press-track {
@@ -1505,9 +1707,22 @@ body {
   }
 }
 
+/* ==========================================================================
+   MOBILE RESPONSIVENESS (max-width: 768px)
+   ========================================================================== */
 @media (max-width: 768px) {
+  /* Navigation */
   .navbar {
-    padding: 16px 20px;
+    padding: 14px 18px;
+  }
+
+  .navbar.scrolled {
+    padding: 10px 18px;
+  }
+
+  .nav-left,
+  .nav-right {
+    gap: 12px;
   }
 
   .nav-links {
@@ -1518,14 +1733,326 @@ body {
     display: block;
   }
 
-  .hero-hud {
-    left: 20px;
-    right: 20px;
-    bottom: 20px;
+  .brand-monogram {
+    font-size: 1.25rem;
+    letter-spacing: 0.28em;
   }
 
-  .hud-center {
+  .brand-origin {
+    font-size: 0.45rem;
+    letter-spacing: 0.25em;
+  }
+
+  .consultation-btn {
+    padding: 8px 16px;
+    font-size: 0.6rem;
+    letter-spacing: 0.16em;
+    gap: 6px;
+  }
+
+  .btn-text-desktop {
     display: none;
+  }
+
+  .btn-text-mobile {
+    display: inline;
+  }
+
+  /* Hero Section: 520vh feels natural with touch swipe momentum */
+  .hero-scroll-container {
+    height: 520vh;
+  }
+
+  .hero-sticky-viewport {
+    height: 100vh;
+    height: 100dvh;
+  }
+
+  .hero-text-block {
+    width: 92%;
+    max-width: 440px;
+  }
+
+  .gold-emboss-tag {
+    font-size: 0.58rem;
+    letter-spacing: 0.26em;
+    padding: 3px 12px;
+    margin-bottom: 10px;
+  }
+
+  .hero-title {
+    font-size: clamp(1.85rem, 8.5vw, 2.7rem);
+    letter-spacing: 0.15em;
+    line-height: 1.15;
+    margin-bottom: 12px;
+  }
+
+  .gold-divider-line {
+    width: 40px;
+    margin: 0 auto 12px;
+  }
+
+  .hero-subtitle {
+    font-size: clamp(1rem, 4.4vw, 1.25rem);
+    letter-spacing: 0.05em;
+    line-height: 1.4;
+  }
+
+  /* HUD & Transition Cue */
+  .hero-hud {
+    right: 16px;
+    bottom: 16px;
+  }
+
+  .gold-seal {
+    font-size: 0.72rem;
+    letter-spacing: 0.14em;
+  }
+
+  .purity-text {
+    font-size: 0.5rem;
+    letter-spacing: 0.18em;
+  }
+
+  .hero-transition-cue {
+    bottom: 14px;
+    gap: 4px;
+  }
+
+  .glow-beam {
+    height: 24px;
+  }
+
+  .transition-title {
+    font-size: 0.56rem;
+    letter-spacing: 0.22em;
+  }
+
+  /* Main Sections Spacing */
+  .container,
+  .container-narrow {
+    padding: 0 18px;
+  }
+
+  .intro-statement-section {
+    padding: 80px 0 60px;
+  }
+
+  .editorial-quote {
+    font-size: clamp(1.28rem, 5.2vw, 1.8rem);
+    line-height: 1.5;
+    margin-bottom: 28px;
+  }
+
+  .collections-section {
+    padding: 80px 0;
+  }
+
+  .section-header {
+    margin-bottom: 40px;
+  }
+
+  .section-title {
+    font-size: clamp(1.8rem, 6.5vw, 2.5rem);
+  }
+
+  /* Filter Tabs: Horizontal Swipeable Pills on Mobile */
+  .filter-tabs {
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    justify-content: flex-start;
+    padding: 4px 6px 16px;
+    gap: 8px;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+  }
+
+  .filter-tabs::-webkit-scrollbar {
+    display: none;
+  }
+
+  .filter-btn {
+    flex-shrink: 0;
+    padding: 8px 18px;
+    font-size: 0.66rem;
+    letter-spacing: 0.14em;
+  }
+
+  /* Product Cards: Clean 1-Column Touch-Friendly Cards */
+  .products-grid {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+
+  .card-image-wrap {
+    height: 290px;
+  }
+
+  .product-card .card-actions {
+    opacity: 1;
+    transform: none;
+    bottom: 14px;
+  }
+
+  .quick-view-btn {
+    padding: 10px 22px;
+    font-size: 0.65rem;
+    letter-spacing: 0.18em;
+    box-shadow: 0 4px 18px rgba(0, 0, 0, 0.7);
+  }
+
+  .card-details {
+    padding: 20px 18px;
+  }
+
+  .card-title {
+    font-size: 1.15rem;
+  }
+
+  .card-price {
+    font-size: 1.1rem;
+  }
+
+  /* Craftsmanship */
+  .craftsmanship-section {
+    padding: 80px 0;
+  }
+
+  .craft-lead {
+    font-size: 1.25rem;
+    margin-bottom: 18px;
+  }
+
+  .craft-pillars {
+    gap: 22px;
+  }
+
+  .pillar-item {
+    gap: 16px;
+  }
+
+  .pillar-number {
+    font-size: 1.1rem;
+  }
+
+  .visual-frame {
+    padding: 24px 16px;
+  }
+
+  .visual-art-display {
+    height: 210px;
+  }
+
+  .goldsmith-crucible {
+    width: 105px;
+    height: 105px;
+    margin-bottom: 18px;
+  }
+
+  .molten-core {
+    width: 58px;
+    height: 58px;
+  }
+
+  .visual-quote {
+    font-size: 1.05rem;
+  }
+
+  .gold-metrics {
+    gap: 10px;
+    margin-top: 24px;
+    padding-top: 18px;
+  }
+
+  .m-val {
+    font-size: 1.22rem;
+  }
+
+  .m-label {
+    font-size: 0.55rem;
+    letter-spacing: 0.1em;
+  }
+
+  /* Bespoke Atelier Form */
+  .bespoke-section {
+    padding: 80px 0;
+  }
+
+  .bespoke-card {
+    padding: 36px 18px;
+  }
+
+  .form-row {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+
+  .form-group input,
+  .form-group select {
+    font-size: 16px; /* Prevents auto-zoom on iOS Safari */
+    padding: 13px 15px;
+  }
+
+  .submit-bespoke-btn {
+    padding: 15px;
+    font-size: 0.72rem;
+    letter-spacing: 0.2em;
+  }
+
+  /* Press Section */
+  .press-section {
+    padding: 50px 0;
+  }
+
+  .press-quote {
+    font-size: 1.05rem;
+  }
+
+  /* Footer */
+  .site-footer {
+    padding: 70px 0 30px;
+  }
+
+  .footer-top {
+    grid-template-columns: 1fr;
+    gap: 36px;
+    margin-bottom: 48px;
+  }
+
+  .footer-newsletter-col .newsletter-form {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .newsletter-input {
+    border-right: 1px solid var(--gold-dim);
+    font-size: 16px; /* Prevents auto-zoom on iOS */
+    padding: 12px 16px;
+  }
+
+  .newsletter-btn {
+    padding: 13px;
+    width: 100%;
+  }
+
+  .footer-bottom {
+    flex-direction: column;
+    gap: 16px;
+    text-align: center;
+  }
+
+  .footer-legal {
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 16px;
+  }
+
+  /* Modal Mobile Optimization */
+  .modal-card {
+    width: 94%;
+    max-height: 88vh;
+    max-height: 88dvh;
+    overflow-y: auto;
   }
 
   .modal-body {
@@ -1536,18 +2063,65 @@ body {
     min-height: 200px;
   }
 
-  .form-row {
-    grid-template-columns: 1fr;
+  .modal-gem-icon {
+    font-size: 3.5rem;
   }
 
-  .footer-top {
-    grid-template-columns: 1fr;
-    gap: 36px;
+  .modal-info {
+    padding: 24px 18px;
   }
 
-  .footer-bottom {
-    flex-direction: column;
-    gap: 16px;
-    text-align: center;
+  .modal-title {
+    font-size: 1.35rem;
+  }
+
+  .modal-price {
+    font-size: 1.2rem;
+  }
+
+  .modal-specs {
+    margin-bottom: 24px;
+  }
+
+  .modal-action-btn {
+    padding: 14px;
+    font-size: 0.7rem;
+    letter-spacing: 0.18em;
+  }
+
+  .modal-close {
+    top: 10px;
+    right: 14px;
+    font-size: 1.8rem;
+    width: 36px;
+    height: 36px;
+  }
+}
+
+/* ==========================================================================
+   EXTRA COMPACT MOBILE (max-width: 400px)
+   ========================================================================== */
+@media (max-width: 400px) {
+  .brand-monogram {
+    font-size: 1.1rem;
+    letter-spacing: 0.22em;
+  }
+
+  .consultation-btn {
+    padding: 7px 12px;
+    font-size: 0.55rem;
+  }
+
+  .hero-title {
+    font-size: 1.8rem;
+    letter-spacing: 0.12em;
+  }
+
+  .hero-subtitle {
+    font-size: 0.95rem;
+  }
+
+  .card-image-wrap {
+    height: 250px;
   }
 }

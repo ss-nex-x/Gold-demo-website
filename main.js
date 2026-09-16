@@ -188,8 +188,17 @@ function renderCanvasFrame(exactFrameProgress) {
   const imgW = img1.naturalWidth || 1920;
   const imgH = img1.naturalHeight || 1080;
 
-  // Full-bleed edge-to-edge cover: zero gap on left and right
-  const scale = Math.max(cW / imgW, cH / imgH) * 1.002;
+  // Responsive scaling: On portrait mobile screens, scale so the centerpiece jewelry is prominent and never clipped horizontally
+  const isPortrait = cW < cH;
+  let scale;
+  if (isPortrait) {
+    const coverScale = Math.max(cW / imgW, cH / imgH);
+    const fitWidthScale = cW / (imgW * 0.72);
+    scale = Math.min(coverScale, Math.max(cW / imgW, fitWidthScale));
+  } else {
+    scale = Math.max(cW / imgW, cH / imgH) * 1.002;
+  }
+
   const drawW = Math.ceil(imgW * scale);
   const drawH = Math.ceil(imgH * scale);
   const drawX = Math.floor((cW - drawW) / 2);
@@ -465,6 +474,48 @@ window.handleConsultationSubmit = function (e) {
   alert(`Thank you, ${name}. Our Private Client Concierge in ${location.toUpperCase()} will contact you within 24 hours to arrange your atelier appointment.`);
   e.target.reset();
 };
+
+/* ==========================================================================
+   MOBILE MENU NAVIGATION
+   ========================================================================== */
+
+window.toggleMobileMenu = function () {
+  const menu = document.getElementById('mobile-menu');
+  if (!menu) return;
+  const isOpen = menu.classList.contains('active');
+  if (isOpen) {
+    window.closeMobileMenu();
+  } else {
+    window.openMobileMenu();
+  }
+};
+
+window.openMobileMenu = function () {
+  const menu = document.getElementById('mobile-menu');
+  const btn = document.getElementById('menu-toggle-btn');
+  if (!menu) return;
+  menu.classList.add('active');
+  menu.setAttribute('aria-hidden', 'false');
+  btn?.classList.add('open');
+  document.body.style.overflow = 'hidden';
+};
+
+window.closeMobileMenu = function () {
+  const menu = document.getElementById('mobile-menu');
+  const btn = document.getElementById('menu-toggle-btn');
+  if (!menu) return;
+  menu.classList.remove('active');
+  menu.setAttribute('aria-hidden', 'true');
+  btn?.classList.remove('open');
+  document.body.style.overflow = '';
+};
+
+window.addEventListener('keydown', (e) => {
+  if (e.key === 'Escape') {
+    window.closeMobileMenu();
+    window.closeProductModal();
+  }
+});
 
 /* ==========================================================================
    9. INITIALIZATION (Fail-safe for ES module timing)

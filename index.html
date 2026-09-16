@@ -54,7 +54,7 @@
   <header id="navbar" class="navbar">
     <div class="nav-container">
       <div class="nav-left">
-        <button class="nav-btn menu-toggle" aria-label="Open Navigation">
+        <button class="nav-btn menu-toggle" id="menu-toggle-btn" aria-label="Open Navigation" onclick="toggleMobileMenu()">
           <span class="menu-bar"></span>
           <span class="menu-bar"></span>
         </button>
@@ -72,13 +72,56 @@
       </a>
 
       <div class="nav-right">
-        <button class="nav-btn consultation-btn" onclick="openConsultationModal()">
+        <button class="nav-btn consultation-btn" onclick="openConsultationModal()" aria-label="Book VIP Appointment">
           <span class="btn-sparkle">✦</span>
-          <span class="btn-text">VIP APPOINTMENT</span>
+          <span class="btn-text btn-text-desktop">VIP APPOINTMENT</span>
+          <span class="btn-text btn-text-mobile">VIP</span>
         </button>
       </div>
     </div>
   </header>
+
+  <!-- MOBILE LUXURY NAVIGATION DRAWER -->
+  <div id="mobile-menu" class="mobile-menu-drawer" aria-hidden="true">
+    <div class="mobile-menu-backdrop" onclick="closeMobileMenu()"></div>
+    <div class="mobile-menu-panel">
+      <div class="mobile-menu-header">
+        <div class="mobile-brand">
+          <span class="brand-monogram">AURUM</span>
+          <span class="brand-origin">HAUTE JOAILLERIE</span>
+        </div>
+        <button class="mobile-close-btn" onclick="closeMobileMenu()" aria-label="Close Menu">&times;</button>
+      </div>
+      <nav class="mobile-menu-nav">
+        <a href="#collections" class="mobile-nav-link" onclick="closeMobileMenu()">
+          <span class="m-link-num">01</span>
+          <span class="m-link-text">High Jewellery</span>
+        </a>
+        <a href="#craftsmanship" class="mobile-nav-link" onclick="closeMobileMenu()">
+          <span class="m-link-num">02</span>
+          <span class="m-link-text">Craftsmanship</span>
+        </a>
+        <a href="#bespoke" class="mobile-nav-link" onclick="closeMobileMenu()">
+          <span class="m-link-num">03</span>
+          <span class="m-link-text">The Atelier</span>
+        </a>
+        <a href="#heritage" class="mobile-nav-link" onclick="closeMobileMenu()">
+          <span class="m-link-num">04</span>
+          <span class="m-link-text">Heritage &amp; Press</span>
+        </a>
+      </nav>
+      <div class="mobile-menu-footer">
+        <button class="mobile-vip-btn" onclick="closeMobileMenu(); openConsultationModal()">
+          <span class="btn-sparkle">✦</span>
+          <span>VIP APPOINTMENT</span>
+        </button>
+        <div class="mobile-menu-meta">
+          <p class="m-cities">PARIS • GENÈVE • DUBAI</p>
+          <p class="m-seal">AU 999.9 24K FINE GOLD</p>
+        </div>
+      </div>
+    </div>
+  </div>
 
   <!-- ======================================================== -->
   <!-- HERO SCROLL CONTAINER (550vh tall to drive 300 frames)   -->
