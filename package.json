@@ -1,5 +1,5 @@
 {
-  "name": "luxury-gold-jewellery",
+  "name": "purity-testing-centre",
   "private": true,
   "version": "1.0.0",
   "type": "module",
@@ -10,5 +10,6 @@
   },
   "devDependencies": {
     "vite": "^6.2.0"
-  }
+  },
+  "description": "Landing page for a gold and silver purity testing centre."
 }
