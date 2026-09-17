@@ -45,7 +45,7 @@ replace the stand-ins above and fill the two remaining slots:
 
 | Filename to save as | What to photograph | Shape |
 | --- | --- | --- |
-| `machine.jpg` | Your testing machine — whole unit, switched on, shot straight on. **Most important one.** | 16:10 |
+| `machine.jpg` | Your testing machine — whole unit, switched on, shot straight on. **Most important one.** Already wired: drop the file in and run `npm run images`. | 16:10 |
 | `service-coins.jpg` | Gold coins and bars together. *(currently a ring)* | 3:2 |
 | `service-silver.jpg` | Silver items — jewellery or articles. *(currently gold jewellery)* | 3:2 |
 | `service-result.jpg` | A result being explained, or the reading on the machine's screen. *(currently a bangle)* | 3:2 |
@@ -55,7 +55,10 @@ Replacing a stand-in is easy: save your photo into `images/source/` under the sa
 listed in `scripts/optimise-images.mjs`, run `npm run images`, and the card updates. No HTML
 change needed.
 
-To fill the machine or shop front slot: save it into `images/source/`, add a line for it in
+The machine slot is already listed in `scripts/optimise-images.mjs` and its card carries a
+zoom-in effect, so `machine.jpg` needs no code changes — just the file.
+
+To fill the shop front slot: save it into `images/source/`, add a line for it in
 `scripts/optimise-images.mjs` (copy an existing line), run `npm run images`, then in
 `index.html` find that slot's `PHOTO SLOT` comment and copy the `<picture>` block the
 hero already uses.

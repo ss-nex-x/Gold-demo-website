@@ -640,6 +640,28 @@ ul {
   border-radius: inherit;
 }
 
+/* Zoom-in slot: the photo eases in once its section is revealed, and pushes
+   further on hover. A completing movement, not a loop.
+   The scale travels through a custom property, and the reveal selector is wrapped
+   in :where() so it carries no specificity — otherwise the ancestor rule would
+   out-weigh :hover and the hover push would never apply. */
+.shot--zoom img {
+  --zoom: 1;
+  transform: scale(var(--zoom));
+  transform-origin: center;
+  transition: transform 1.6s cubic-bezier(.22, .8, .3, 1);
+}
+
+:where(.reveal.is-visible, .is-visible) .shot--zoom img {
+  --zoom: 1.06;
+}
+
+.shot--zoom:hover img,
+.shot--zoom:focus-within img {
+  --zoom: 1.12;
+  transition-duration: .5s;
+}
+
 .shot-16-10 {
   aspect-ratio: 16 / 10;
 }
@@ -1456,6 +1478,13 @@ ul {
   .specimen-tag::before,
   .result-meter-fill {
     animation: none;
+  }
+
+  .shot--zoom img,
+  .shot--zoom:hover img,
+  .shot--zoom:focus-within img {
+    --zoom: 1;
+    transition: none;
   }
 
   .result-meter-fill {
