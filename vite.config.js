@@ -34,6 +34,14 @@ export default defineConfig({
           fs.cpSync(srcDir, destDir, { recursive: true });
           console.log('Frames successfully copied to dist!');
         }
+        const imagesSrc = path.resolve(__dirname, 'images');
+        const imagesDest = path.resolve(__dirname, 'dist/images');
+        if (fs.existsSync(imagesSrc)) {
+          console.log('Copying images to dist for production deployment...');
+          fs.mkdirSync(path.dirname(imagesDest), { recursive: true });
+          fs.cpSync(imagesSrc, imagesDest, { recursive: true });
+          console.log('Images successfully copied to dist!');
+        }
       }
     }
   ],

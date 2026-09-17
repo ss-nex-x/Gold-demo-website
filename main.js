@@ -439,19 +439,21 @@ filterBtns.forEach(btn => {
   });
 });
 
-window.openProductModal = function (title, price, desc, type) {
+window.openProductModal = function (title, price, desc, type, imgSrc) {
   const modal = document.getElementById('product-modal');
   if (!modal) return;
   document.getElementById('modal-title').textContent = title;
   document.getElementById('modal-price').textContent = price;
   document.getElementById('modal-desc').textContent = desc;
 
-  const icon = modal.querySelector('.modal-gem-icon');
-  if (icon) {
-    if (type === 'necklace') icon.textContent = '✦';
-    else if (type === 'ring') icon.textContent = '◆';
-    else if (type === 'bracelet') icon.textContent = '◉';
-    else icon.textContent = '◈';
+  const artBox = document.getElementById('modal-art-box');
+  if (artBox) {
+    if (imgSrc) {
+      artBox.innerHTML = `<img src="${imgSrc}" alt="${title}" class="modal-product-img">`;
+    } else {
+      const icon = type === 'necklace' ? '✦' : type === 'ring' ? '◆' : type === 'bracelet' ? '◉' : '◈';
+      artBox.innerHTML = `<div class="art-shimmer"></div><div class="modal-gem-icon">${icon}</div>`;
+    }
   }
 
   modal.classList.add('open');
