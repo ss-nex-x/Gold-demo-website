@@ -49,7 +49,7 @@ replace the stand-ins above and fill the two remaining slots:
 | `service-coins.jpg` | Gold coins and bars together. *(currently a ring)* | 3:2 |
 | `service-silver.jpg` | Silver items — jewellery or articles. *(currently gold jewellery)* | 3:2 |
 | `service-result.jpg` | A result being explained, or the reading on the machine's screen. *(currently a bangle)* | 3:2 |
-| `shopfront.jpg` | Your entrance, or your testing counter — whatever shows visitors what the place looks like. Already wired: drop the file in and run `npm run images`. | 16:10 |
+| `shopfront.jpg` | Your entrance, or your testing counter — whatever shows visitors what the place looks like. A drawing of a testing counter stands in for now; drop the file in and run `npm run images`. | 16:10 |
 
 Replacing a stand-in is easy: save your photo into `images/source/` under the same name
 listed in `scripts/optimise-images.mjs`, run `npm run images`, and the card updates. No HTML
@@ -60,10 +60,14 @@ effect, so `machine.jpg` needs no code changes — just the file. The slot curre
 drawn illustration of a handheld device; the comment above it in `index.html` has the exact
 `<figure>` block to paste in its place once the photo exists.
 
-Both remaining slots — `machine.jpg` and `shopfront.jpg` — are already listed in
-`scripts/optimise-images.mjs`, and each one's `PHOTO SLOT` comment in `index.html` holds the
-exact `<figure>` block to paste in its place. So each needs only the file, then
-`npm run images`.
+Both remaining slots — `machine.jpg` and `shopfront.jpg` — currently hold drawn
+illustrations, are already listed in `scripts/optimise-images.mjs`, and each one's
+`PHOTO SLOT` comment in `index.html` holds the exact `<figure>` block to paste in place of
+the drawing. So each needs only the file, then `npm run images`.
+
+**No slot on the page is empty any more.** Every drawing is plainly a drawing and none of
+them claims to be a photograph of your centre — but photographs of the real place will do
+more for trust than any illustration can.
 
 ## How to take them
 

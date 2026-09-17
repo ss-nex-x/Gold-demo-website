@@ -708,7 +708,127 @@
               </picture>
             </figure>
           -->
-          <figure class="shot shot-16-10 shot--shop"></figure>
+          <figure class="shot shot-16-10 shot--zoom">
+            <svg class="shot-art" viewBox="0 0 1280 800" preserveAspectRatio="xMidYMid slice"
+              role="img" aria-label="Illustration of a testing counter with an analyser, tablet and gem tray">
+              <defs>
+                <linearGradient id="ct-wall" x1="0" y1="0" x2=".7" y2="1">
+                  <stop offset="0" stop-color="#f0e0c2"/>
+                  <stop offset=".45" stop-color="#e2cca2"/>
+                  <stop offset="1" stop-color="#c2a878"/>
+                </linearGradient>
+                <linearGradient id="ct-beam" x1="0" y1="0" x2="1" y2="0">
+                  <stop offset="0" stop-color="#fffaf0" stop-opacity="0"/>
+                  <stop offset=".5" stop-color="#fffdf6" stop-opacity=".6"/>
+                  <stop offset="1" stop-color="#fffaf0" stop-opacity="0"/>
+                </linearGradient>
+                <linearGradient id="ct-top" x1="0" y1="0" x2="0" y2="1">
+                  <stop offset="0" stop-color="#fbf5e8"/>
+                  <stop offset="1" stop-color="#e8ddc8"/>
+                </linearGradient>
+                <linearGradient id="ct-front" x1="0" y1="0" x2="0" y2="1">
+                  <stop offset="0" stop-color="#d9c9a6"/>
+                  <stop offset="1" stop-color="#a68d63"/>
+                </linearGradient>
+                <linearGradient id="ct-shell" x1="0" y1="0" x2="1" y2="1">
+                  <stop offset="0" stop-color="#f2dfae"/>
+                  <stop offset=".45" stop-color="#d4ae5c"/>
+                  <stop offset="1" stop-color="#a07f2c"/>
+                </linearGradient>
+                <linearGradient id="ct-dark" x1="0" y1="0" x2="0" y2="1">
+                  <stop offset="0" stop-color="#3a3630"/>
+                  <stop offset="1" stop-color="#1b1917"/>
+                </linearGradient>
+                <linearGradient id="ct-screen" x1="0" y1="0" x2=".6" y2="1">
+                  <stop offset="0" stop-color="#eef2f6"/>
+                  <stop offset="1" stop-color="#cfd8e2"/>
+                </linearGradient>
+                <filter id="ct-soft" x="-30%" y="-30%" width="160%" height="160%">
+                  <feGaussianBlur stdDeviation="9"/>
+                </filter>
+                <filter id="ct-drop" x="-30%" y="-30%" width="170%" height="170%">
+                  <feDropShadow dx="6" dy="10" stdDeviation="9" flood-color="#5a4622" flood-opacity=".38"/>
+                </filter>
+              </defs>
+
+              <rect width="1280" height="800" fill="url(#ct-wall)"/>
+              <path d="M-120 520 L250 -60 L470 -60 L100 520 Z" fill="url(#ct-beam)"/>
+
+              <!-- background cabinetry, softly out of focus -->
+              <g filter="url(#ct-soft)" opacity=".75">
+                <rect x="40" y="150" width="330" height="14" rx="6" fill="#cbb387"/>
+                <rect x="70" y="96" width="70" height="54" rx="6" fill="#d8c49c"/>
+                <rect x="170" y="86" width="56" height="64" rx="6" fill="#e6d6b4"/>
+                <rect x="250" y="104" width="76" height="46" rx="6" fill="#cdb78d"/>
+                <rect x="0" y="300" width="380" height="160" fill="#6f5533" opacity=".55"/>
+                <rect x="120" y="332" width="86" height="60" rx="8" fill="#e3d2ae"/>
+                <rect x="226" y="326" width="70" height="66" rx="8" fill="#d6c299"/>
+                <rect x="980" y="60" width="300" height="400" rx="10" fill="#efe2c6" opacity=".7"/>
+              </g>
+
+              <!-- counter -->
+              <rect x="0" y="455" width="1280" height="120" fill="url(#ct-top)"/>
+              <g opacity=".35" stroke="#b9a37a" fill="none" stroke-width="2">
+                <path d="M60 500c90-14 180 10 270-4s150 12 240 2"/>
+                <path d="M420 540c120-10 210 8 330-6"/>
+                <path d="M840 486c130-8 220 12 330 2"/>
+              </g>
+              <rect x="0" y="575" width="1280" height="26" fill="#c9a94f" opacity=".85"/>
+              <rect x="0" y="601" width="1280" height="199" fill="url(#ct-front)"/>
+
+              <!-- analyser -->
+              <g filter="url(#ct-drop)">
+                <rect x="655" y="382" width="250" height="76" rx="14" fill="url(#ct-dark)"/>
+                <path d="M669 382h222a34 34 0 0 0 34-34v-24a34 34 0 0 0-34-34H723c-32 0-54 26-54 52z"
+                  fill="url(#ct-shell)"/>
+                <rect x="700" y="330" width="86" height="54" rx="10" fill="#241f19"/>
+                <rect x="746" y="360" width="22" height="46" rx="6" fill="#4a423a"/>
+                <ellipse cx="757" cy="406" rx="26" ry="8" fill="#2c2721"/>
+                <rect x="672" y="446" width="216" height="10" rx="5" fill="#0f0e0c" opacity=".55"/>
+              </g>
+
+              <!-- tablet -->
+              <g filter="url(#ct-drop)">
+                <rect x="916" y="290" width="188" height="150" rx="10" fill="#2b2824"/>
+                <rect x="926" y="300" width="168" height="130" rx="6" fill="url(#ct-screen)"/>
+                <g fill="#7f8b99" opacity=".85">
+                  <rect x="938" y="312" width="66" height="6" rx="3"/>
+                  <rect x="938" y="328" width="46" height="4" rx="2"/>
+                  <rect x="938" y="340" width="54" height="4" rx="2"/>
+                  <rect x="938" y="352" width="40" height="4" rx="2"/>
+                </g>
+                <rect x="1016" y="312" width="66" height="48" rx="4" fill="#b9c6d4"/>
+                <path d="M1020 352l14-16 12 10 16-22 14 18v12h-56z" fill="#6d7c8c"/>
+                <rect x="1016" y="370" width="66" height="46" rx="4" fill="#c8d3de"/>
+                <path d="M1020 410l16-14 12 8 14-18 14 14v10h-56z" fill="#77869a"/>
+                <rect x="986" y="440" width="48" height="18" rx="4" fill="#3a3630"/>
+              </g>
+
+              <!-- gem tray -->
+              <g filter="url(#ct-drop)">
+                <ellipse cx="404" cy="508" rx="86" ry="26" fill="#e7d9b8"/>
+                <ellipse cx="404" cy="503" rx="78" ry="21" fill="#f6eeda"/>
+                <g fill="#fff" stroke="#b9c3cd" stroke-width="1.5">
+                  <path d="M372 496l7-7 7 7-7 8z"/>
+                  <path d="M398 490l8-8 8 8-8 9z"/>
+                  <path d="M424 500l7-7 7 7-7 8z"/>
+                  <path d="M386 510l6-6 6 6-6 7z"/>
+                  <path d="M412 512l6-6 6 6-6 7z"/>
+                </g>
+                <circle cx="440" cy="508" r="4" fill="#23201c"/>
+              </g>
+
+              <!-- loupe and tweezers -->
+              <g filter="url(#ct-drop)">
+                <circle cx="556" cy="492" r="25" fill="none" stroke="#c9a94f" stroke-width="7"/>
+                <circle cx="556" cy="492" r="21" fill="#e9eef3" opacity=".55"/>
+                <rect x="574" y="500" width="56" height="12" rx="6" fill="#7a4f27" transform="rotate(14 574 500)"/>
+                <path d="M600 470l84 26" stroke="#b9bfc6" stroke-width="6" stroke-linecap="round"/>
+                <path d="M604 482l82 18" stroke="#cfd5db" stroke-width="5" stroke-linecap="round"/>
+                <path d="M624 520l70-6" stroke="#b9bfc6" stroke-width="5" stroke-linecap="round"/>
+              </g>
+            </svg>
+          </figure>
 
           <address class="split-panel contact-details">
           <h3 class="panel-title">Purity Testing Centre</h3>
