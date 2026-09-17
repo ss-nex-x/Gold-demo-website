@@ -18,6 +18,9 @@ const OUT = 'images';
 const SLOTS = [
   { name: 'hero-item', from: 'solitaire-imperial-ring.jpg', width: 1100, ratio: 4 / 3 },
   { name: 'service-gold', from: 'sovereign-fluted-cuff.jpg', width: 800, ratio: 3 / 2 },
+  { name: 'service-coins', from: 'aeterna-pave-band.jpg', width: 800, ratio: 3 / 2 },
+  { name: 'service-silver', from: 'eclipse-solaire-collar.jpg', width: 800, ratio: 3 / 2 },
+  { name: 'service-result', from: 'showcase-bangle.jpg', width: 800, ratio: 3 / 2 },
 ];
 
 const kb = n => `${(n / 1024).toFixed(0)} kB`;

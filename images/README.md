@@ -20,37 +20,42 @@ That resizes and compresses it into `images/`. A 630 kB phone photo comes out ar
 
 ## What is filled in now
 
-| Slot | Photo | Status |
+| Slot | Photo shown | Subject matches the card? |
 | --- | --- | --- |
-| Hero | `hero-item` — gold ring on dark cloth | filled (from `solitaire-imperial-ring.jpg`) |
-| Services — Gold jewellery | `service-gold` — gold cuff | filled (from `sovereign-fluted-cuff.jpg`) |
+| Hero | gold ring on dark cloth | yes |
+| Gold jewellery | gold cuff | yes |
+| Coins & bars | gold band | **no — it is a ring, not coins or bars** |
+| Silver items | diamond-set gold collar | **no — it is gold jewellery, not silver** |
+| Purity & composition | gold bangle | loosely — an item, not a reading |
 
-These two came with the project. They are jewellery product shots, not photos of your
-centre — good enough to make the page look right, worth replacing when you can.
+Every photo in this project is gold jewellery: the four product shots that came with the
+old website, plus `showcase-bangle.jpg`, a still taken from the 300-frame jewellery clip in
+`ezgif-27fd5a89d62bf8c0-png-split/`. There are no photographs of coins, bars, silver
+articles, testing equipment or the premises anywhere in the repository.
+
+The bottom three cards therefore show jewellery under headings about coins, silver and
+readings. That was a deliberate choice to make the row look complete. **Replacing them with
+photographs of the real subjects is the single biggest improvement left on this page** — a
+visitor who reads "gold coins, biscuits and bars" and sees a diamond ring notices.
 
 ## What is still needed
 
-Three service cards — Coins & bars, Silver items, and Purity & composition — carry
-**drawn illustrations** on a dark backdrop, matching the photographed card beside them.
-They are artwork, not photographs, so they never pretend to be your actual coins, your
-actual silver or your actual machine reading. They look finished, and a real photo is
-still better. The machine and shop front slots remain plain panels.
-
-They are deliberately **not** filled with the leftover jewellery pictures, because a
-jewellery photo would be misleading in each case:
+The machine and shop front slots still show plain gold panels. Send these photos to
+replace the stand-ins above and fill the two remaining slots:
 
 | Filename to save as | What to photograph | Shape |
 | --- | --- | --- |
 | `machine.jpg` | Your testing machine — whole unit, switched on, shot straight on. **Most important one.** | 16:10 |
-| `service-coins.jpg` | Gold coins and bars together. *(illustration in place)* | 3:2 |
-| `service-silver.jpg` | Silver items — jewellery or articles. *(illustration in place)* | 3:2 |
-| `service-result.jpg` | A result being explained, or the reading on the machine's screen. *(illustration in place)* | 3:2 |
+| `service-coins.jpg` | Gold coins and bars together. *(currently a ring)* | 3:2 |
+| `service-silver.jpg` | Silver items — jewellery or articles. *(currently gold jewellery)* | 3:2 |
+| `service-result.jpg` | A result being explained, or the reading on the machine's screen. *(currently a bangle)* | 3:2 |
 | `shopfront.jpg` | Your entrance from outside, with the board readable. | 16:10 |
 
-To replace an illustration with a photo, delete the `<svg class="shot-art">` block from
-that card's `<figure>` and put the `<picture>` block there instead.
+Replacing a stand-in is easy: save your photo into `images/source/` under the same name
+listed in `scripts/optimise-images.mjs`, run `npm run images`, and the card updates. No HTML
+change needed.
 
-To add one: save it into `images/source/`, add a line for it in
+To fill the machine or shop front slot: save it into `images/source/`, add a line for it in
 `scripts/optimise-images.mjs` (copy an existing line), run `npm run images`, then in
 `index.html` find that slot's `PHOTO SLOT` comment and copy the `<picture>` block the
 hero already uses.
@@ -70,7 +75,7 @@ hero already uses.
 - Any document showing a customer's name, phone number or address.
 - Photos taken from Google or another jeweller's website.
 
-## Unused originals
+## Originals
 
-`aeterna-pave-band.jpg` and `eclipse-solaire-collar.jpg` sit in `images/source/` unused.
-They are left over from the previous website.
+All five files in `images/source/` are now in use. Four came with the previous website;
+`showcase-bangle.jpg` was extracted from the old site's frame sequence.
