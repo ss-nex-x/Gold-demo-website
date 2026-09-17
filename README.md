@@ -22,10 +22,12 @@ scripts/      npm run images — resizes and compresses source photos
 
 ## Photo slots
 
-Seven `.shot` slots carry the site's imagery. Five hold photographs; two paint a
-brushed-gold panel with a faint line-art mark (machine, shop front) while they wait on real
-photos. Three of the five photographs are gold jewellery standing in for subjects the
-repository has no pictures of — see the mismatch table in `images/README.md`. Dropping an `<img>` inside the `<figure>` replaces the panel;
+Seven `.shot` slots carry the site's imagery. Five hold photographs, the machine slot holds
+an inline-SVG drawing of a handheld device, and the shop front paints a brushed-gold panel
+while it waits on a real photo. Three of the five photographs are gold jewellery standing in
+for subjects the repository has no pictures of — see the mismatch table in
+`images/README.md`. `.shot--zoom` adds a settle-in zoom (scale 1 → 1.06 on reveal, 1.12 on
+hover) and drives photographs and drawings alike. Dropping an `<img>` inside the `<figure>` replaces the panel;
 `aspect-ratio` reserves the box either way, so adding photos causes **zero layout shift**
 (measured CLS 0.0000). No JavaScript is involved — the slots work with JS disabled.
 
@@ -58,7 +60,7 @@ placeholder and must be replaced with real information. Search the source for
 | Canonical URL | `<head>` | marked `SETUP:`, add once the domain is known |
 | Map embed | contact section | a marked comment shows where the Google Maps iframe goes |
 | Testing method | `#technology` | `SETUP:` note — name the method and say whether the item is affected |
-| **Photos** | 5 filled, 2 empty | machine and shop front are plain panels; three service cards show gold jewellery as stand-ins for coins/silver/result. See `images/README.md` |
+| **Photos** | 5 photos, 1 drawing, 1 empty | the machine slot holds a drawn device, the shop front is a plain panel, and three service cards show gold jewellery as stand-ins. See `images/README.md` |
 
 The WhatsApp links carry pre-filled messages ("I would like to know more about
 gold purity testing", "I would like to test my gold", "…your testing charges").

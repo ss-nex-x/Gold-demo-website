@@ -389,11 +389,105 @@
         <div class="split">
           <div class="reveal">
             <!--
-              PHOTO SLOT — your testing machine. Replace with:
-              <img src="./images/machine.jpg" alt="The purity testing machine at the centre"
-                   width="1280" height="800" loading="lazy" decoding="async">
+              PHOTO SLOT — your testing machine. This is a DRAWING, not a photograph.
+              To use a real photo: put it in images/source/machine.jpg, run
+              `npm run images`, then replace this whole <figure> with:
+              <figure class="shot shot-16-10 shot--zoom">
+                <picture>
+                  <source srcset="./images/machine.webp" type="image/webp">
+                  <img src="./images/machine.jpg" alt="The testing machine at the centre"
+                    width="1280" height="800" loading="lazy" decoding="async">
+                </picture>
+              </figure>
             -->
-            <figure class="shot shot-16-10 shot--machine"></figure>
+            <figure class="shot shot-16-10 shot--zoom">
+              <svg class="shot-art" viewBox="0 0 1280 800" preserveAspectRatio="xMidYMid slice"
+                  role="img" aria-label="Illustration of a handheld purity testing device">
+                <defs>
+                  <linearGradient id="mc-bg" x1="0" y1="0" x2="1" y2="1">
+                    <stop offset="0" stop-color="#e5b44a"/>
+                    <stop offset=".42" stop-color="#d09a22"/>
+                    <stop offset="1" stop-color="#9a6d15"/>
+                  </linearGradient>
+                  <linearGradient id="mc-beam" x1="0" y1="0" x2="1" y2="0">
+                    <stop offset="0" stop-color="#fff8e2" stop-opacity="0"/>
+                    <stop offset=".5" stop-color="#fffdf4" stop-opacity=".72"/>
+                    <stop offset="1" stop-color="#fff8e2" stop-opacity="0"/>
+                  </linearGradient>
+                  <linearGradient id="mc-body" x1="0" y1="0" x2="1" y2=".4">
+                    <stop offset="0" stop-color="#8a6413"/>
+                    <stop offset=".12" stop-color="#e3c074"/>
+                    <stop offset=".38" stop-color="#c49a33"/>
+                    <stop offset=".66" stop-color="#e8cb8a"/>
+                    <stop offset=".88" stop-color="#a87c1c"/>
+                    <stop offset="1" stop-color="#7a570f"/>
+                  </linearGradient>
+                  <linearGradient id="mc-screen" x1="0" y1="0" x2=".7" y2="1">
+                    <stop offset="0" stop-color="#3b4048"/>
+                    <stop offset=".35" stop-color="#20242a"/>
+                    <stop offset="1" stop-color="#0d0f12"/>
+                  </linearGradient>
+                  <linearGradient id="mc-gloss" x1="0" y1="0" x2="1" y2="1">
+                    <stop offset="0" stop-color="#fff" stop-opacity=".18"/>
+                    <stop offset=".45" stop-color="#fff" stop-opacity=".03"/>
+                    <stop offset="1" stop-color="#fff" stop-opacity="0"/>
+                  </linearGradient>
+                  <radialGradient id="mc-glow" cx=".28" cy=".2" r=".7">
+                    <stop offset="0" stop-color="#fff3d0" stop-opacity=".55"/>
+                    <stop offset="1" stop-color="#fff3d0" stop-opacity="0"/>
+                  </radialGradient>
+                  <filter id="mc-shadow" x="-40%" y="-40%" width="190%" height="190%">
+                    <feDropShadow dx="26" dy="16" stdDeviation="22" flood-color="#4a3208" flood-opacity=".45"/>
+                  </filter>
+                </defs>
+
+                <rect width="1280" height="800" fill="url(#mc-bg)"/>
+                <rect width="1280" height="800" fill="url(#mc-glow)"/>
+                <path d="M-140 800 L250 -60 L470 -60 L80 800 Z" fill="url(#mc-beam)" opacity=".85"/>
+
+                <g filter="url(#mc-shadow)">
+                  <!-- top sensor -->
+                  <rect x="612" y="132" width="56" height="30" rx="10" fill="#7e5a12"/>
+                  <ellipse cx="640" cy="134" rx="28" ry="7" fill="#d8b158"/>
+                  <ellipse cx="640" cy="134" rx="16" ry="4" fill="#4a3a16"/>
+
+                  <!-- side buttons -->
+                  <rect x="494" y="286" width="14" height="54" rx="7" fill="#a67c1e"/>
+                  <rect x="494" y="352" width="14" height="34" rx="7" fill="#a67c1e"/>
+                  <rect x="772" y="300" width="14" height="66" rx="7" fill="#8e6715"/>
+
+                  <!-- body -->
+                  <rect x="502" y="158" width="276" height="484" rx="28" fill="url(#mc-body)"/>
+                  <rect x="502" y="158" width="276" height="484" rx="28" fill="none"
+                    stroke="#fdf3d5" stroke-opacity=".35" stroke-width="2"/>
+
+                  <!-- speaker slot -->
+                  <rect x="602" y="188" width="76" height="11" rx="5.5" fill="#6d4e10"/>
+
+                  <!-- screen -->
+                  <rect x="530" y="222" width="220" height="356" rx="14" fill="#5d440f"/>
+                  <rect x="536" y="228" width="208" height="344" rx="11" fill="url(#mc-screen)"/>
+                  <path d="M536 228h208v120L536 468z" fill="url(#mc-gloss)"/>
+
+                  <!-- corner screws -->
+                  <g fill="#8a6413">
+                    <circle cx="524" cy="186" r="8"/>
+                    <circle cx="756" cy="186" r="8"/>
+                    <circle cx="524" cy="614" r="8"/>
+                    <circle cx="756" cy="614" r="8"/>
+                  </g>
+                  <g fill="#e3c074" opacity=".7">
+                    <circle cx="524" cy="184" r="4"/>
+                    <circle cx="756" cy="184" r="4"/>
+                    <circle cx="524" cy="612" r="4"/>
+                    <circle cx="756" cy="612" r="4"/>
+                  </g>
+
+                  <!-- lower bezel line -->
+                  <rect x="592" y="596" width="96" height="8" rx="4" fill="#8a6413" opacity=".8"/>
+                </g>
+              </svg>
+            </figure>
           </div>
 
           <div class="split-panel tech-panel reveal">
