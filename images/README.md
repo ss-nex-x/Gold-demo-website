@@ -30,17 +30,25 @@ centre — good enough to make the page look right, worth replacing when you can
 
 ## What is still needed
 
-These slots show a designed gold (or silver) panel until you send a photo. They are
-deliberately **not** filled with jewellery pictures, because a jewellery photo would be
-misleading in each case:
+Three service cards — Coins & bars, Silver items, and Purity & composition — carry
+**drawn illustrations** on a dark backdrop, matching the photographed card beside them.
+They are artwork, not photographs, so they never pretend to be your actual coins, your
+actual silver or your actual machine reading. They look finished, and a real photo is
+still better. The machine and shop front slots remain plain panels.
+
+They are deliberately **not** filled with the leftover jewellery pictures, because a
+jewellery photo would be misleading in each case:
 
 | Filename to save as | What to photograph | Shape |
 | --- | --- | --- |
 | `machine.jpg` | Your testing machine — whole unit, switched on, shot straight on. **Most important one.** | 16:10 |
-| `service-coins.jpg` | Gold coins and bars together. | 3:2 |
-| `service-silver.jpg` | Silver items — jewellery or articles. | 3:2 |
-| `service-result.jpg` | A result being explained, or the reading on the machine's screen. | 3:2 |
+| `service-coins.jpg` | Gold coins and bars together. *(illustration in place)* | 3:2 |
+| `service-silver.jpg` | Silver items — jewellery or articles. *(illustration in place)* | 3:2 |
+| `service-result.jpg` | A result being explained, or the reading on the machine's screen. *(illustration in place)* | 3:2 |
 | `shopfront.jpg` | Your entrance from outside, with the board readable. | 16:10 |
+
+To replace an illustration with a photo, delete the `<svg class="shot-art">` block from
+that card's `<figure>` and put the `<picture>` block there instead.
 
 To add one: save it into `images/source/`, add a line for it in
 `scripts/optimise-images.mjs` (copy an existing line), run `npm run images`, then in

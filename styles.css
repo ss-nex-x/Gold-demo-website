@@ -583,12 +583,36 @@ ul {
   background-image:
     var(--mark, none),
     repeating-linear-gradient(118deg,
-      rgba(255, 255, 255, .13) 0 2px,
+      var(--band, rgba(255, 255, 255, .13)) 0 2px,
       rgba(255, 255, 255, 0) 2px 9px);
   background-repeat: no-repeat, repeat;
   background-position: center, 0 0;
   background-size: 34% auto, auto;
   opacity: .85;
+}
+
+/* Illustrated slots — drawn artwork on a dark backdrop, so the three cards
+   without photographs sit alongside the photographed one as one set. */
+.shot--art {
+  --mark: none;
+  --band: transparent;
+  background:
+    radial-gradient(85% 70% at 50% 34%, rgba(226, 181, 74, .22) 0%, rgba(226, 181, 74, 0) 62%),
+    linear-gradient(168deg, #2b2114 0%, #191308 58%, #0d0a05 100%);
+}
+
+.shot--art.shot--art-cool {
+  background:
+    radial-gradient(85% 70% at 50% 34%, rgba(198, 209, 222, .2) 0%, rgba(198, 209, 222, 0) 62%),
+    linear-gradient(168deg, #232830 0%, #161a20 58%, #0b0d10 100%);
+}
+
+.shot-art {
+  position: absolute;
+  inset: 0;
+  z-index: 2;
+  width: 100%;
+  height: 100%;
 }
 
 /* Silver items must not read as gold. */
