@@ -6,9 +6,11 @@
   "scripts": {
     "dev": "vite --host",
     "build": "vite build",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "images": "node scripts/optimise-images.mjs"
   },
   "devDependencies": {
+    "sharp": "^0.35.4",
     "vite": "^6.2.0"
   },
   "description": "Landing page for a gold and silver purity testing centre."

@@ -8,18 +8,22 @@ one accent colour, system-weight typography and restrained motion.
 
 Static HTML, CSS and a small amount of vanilla JavaScript, bundled with Vite.
 No UI framework, no animation library, no external requests other than the
-Google Fonts stylesheet.
+Google Fonts stylesheet. `sharp` is a dev dependency used only by `npm run images`;
+it is not shipped to the browser.
 
 ```
 index.html    markup and content
 styles.css    design tokens + all styling
 app.js        progressive enhancement only
-images/       photos (see images/README.md for what is still needed)
+images/       web-sized photos the page loads
+images/source/ full-size originals
+scripts/      npm run images — resizes and compresses source photos
 ```
 
 ## Photo slots
 
-Seven `.shot` slots carry the site's photography. While a slot is empty it paints a
+Seven `.shot` slots carry the site's photography; two are filled (hero, gold jewellery)
+and five are waiting on real photos of the centre. While a slot is empty it paints a
 brushed-gold (or silver) panel with a faint line-art mark, so an empty slot reads as
 deliberate rather than broken. Dropping an `<img>` inside the `<figure>` replaces the panel;
 `aspect-ratio` reserves the box either way, so adding photos causes **zero layout shift**
@@ -32,6 +36,7 @@ npm install
 npm run dev      # http://localhost:5173
 npm run build    # outputs to dist/
 npm run preview
+npm run images   # re-compress photos from images/source/ into images/
 ```
 
 ## Before publishing — replace the placeholders
@@ -53,7 +58,7 @@ placeholder and must be replaced with real information. Search the source for
 | Canonical URL | `<head>` | marked `SETUP:`, add once the domain is known |
 | Map embed | contact section | a marked comment shows where the Google Maps iframe goes |
 | Testing method | `#technology` | `SETUP:` note — name the method and say whether the item is affected |
-| **Photos** | 7 slots across the page | empty gold panels — see `images/README.md` for the shot list |
+| **Photos** | 5 of 7 slots | still empty gold panels — machine, coins, silver, result, shop front. See `images/README.md` |
 
 The WhatsApp links carry pre-filled messages ("I would like to know more about
 gold purity testing", "I would like to test my gold", "…your testing charges").
@@ -74,10 +79,11 @@ These are marked in the markup and currently contain no answer:
   the section goes. Add it only with genuine, attributable reviews.
 - **Certifications, accreditations, years of experience, customer counts and
   accuracy percentages.** None are claimed anywhere on the page.
-- **Stock or borrowed photography.** Every photo slot renders a designed gold
-  (or silver) panel until a real photo of the centre is dropped in, so the page
-  can never show someone else's equipment as if it were yours. The shot list is
-  in `images/README.md`.
+- **Equipment and premises photography.** The machine, coins, silver, result and
+  shop front slots stay as designed panels rather than being filled with the
+  jewellery product shots that came with the project — a jewellery photo under
+  "Coins & bars", or standing in for your machine, would misrepresent the centre.
+  The shot list is in `images/README.md`.
 
 The one sample result card in the hero is labelled **"Illustrative example"**
 and carries a note stating it is not a real customer result. Keep that labelling
