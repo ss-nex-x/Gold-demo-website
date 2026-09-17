@@ -222,10 +222,9 @@ function renderCanvasFrame(exactFrameProgress) {
   window.lastRenderedFrame = exactFrame;
 }
 
-// Complete the 300-frame sequence across the first 65% of the hero scroll track.
-// The remaining 35% provides a generous, peaceful dwell buffer on Frame 300 with all text hidden,
-// guaranteeing that Frame 300 is 100% completed and settled well before the main content begins to roll in!
-const ANIMATION_END_THRESHOLD = 0.65;
+// Complete the 300-frame sequence smoothly across the hero scroll track.
+// 0.96 provides a crisp, instantaneous lock onto Frame 300 right before seamlessly rolling into the main content.
+const ANIMATION_END_THRESHOLD = 0.96;
 
 function updateProgressFromScroll() {
   if (!heroSection) return;
@@ -235,7 +234,7 @@ function updateProgressFromScroll() {
   const scrollY = window.pageYOffset || document.documentElement.scrollTop || window.scrollY || 0;
   const rawScrollFraction = Math.max(0, Math.min(1, scrollY / maxScroll));
 
-  // Map 0..0.70 to 0.0..1.0 for the 300 frames
+  // Map 0..0.96 to 0.0..1.0 for the 300 frames
   targetProgress = Math.min(1, rawScrollFraction / ANIMATION_END_THRESHOLD);
 
   // Navbar glassmorphism
@@ -253,12 +252,21 @@ function calculateCurrentFrame() {
 
 function updateHUD(frameIdx, progress) {
   if (heroTransitionCue) {
-    if (frameIdx >= 295 || targetProgress >= 0.98) {
+    if (frameIdx >= 288 || targetProgress >= 0.94) {
       heroTransitionCue.classList.add('active');
     } else {
       heroTransitionCue.classList.remove('active');
     }
   }
+}
+
+if (heroTransitionCue) {
+  heroTransitionCue.addEventListener('click', () => {
+    const mainContent = document.getElementById('main-content');
+    if (mainContent) {
+      mainContent.scrollIntoView({ behavior: 'smooth' });
+    }
+  });
 }
 
 /* ==========================================================================

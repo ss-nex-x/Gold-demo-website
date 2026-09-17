@@ -382,11 +382,11 @@ body {
 }
 
 /* ==========================================================================
-   HERO SCROLL SECTION (550vh tall to drive 300 frames smoothly)
+   HERO SCROLL SECTION (500vh tall to drive 300 frames smoothly)
    ========================================================================== */
 .hero-scroll-container {
   position: relative;
-  height: 700vh;
+  height: 500vh;
   background-color: var(--bg-deep);
 }
 
@@ -591,6 +591,8 @@ body {
 
 .hero-transition-cue.active {
   opacity: 1;
+  pointer-events: auto;
+  cursor: pointer;
 }
 
 .glow-beam {
