@@ -694,9 +694,19 @@
         -->
         <div class="contact-col reveal">
           <!--
-            PHOTO SLOT — your shop front. Replace with:
-            <img src="./images/shopfront.jpg" alt="The entrance to the testing centre"
-                 width="1280" height="800" loading="lazy" decoding="async">
+            PHOTO SLOT — your shop front / testing counter.
+            Already wired in scripts/optimise-images.mjs as `shopfront`.
+            To fill it: put the photo at images/source/shopfront.jpg, run
+            `npm run images`, then replace this comment AND the empty <figure>
+            below with exactly this block:
+
+            <figure class="shot shot-16-10 shot--zoom">
+              <picture>
+                <source srcset="./images/shopfront.webp" type="image/webp">
+                <img src="./images/shopfront.jpg" alt="The testing counter at the centre"
+                  width="1280" height="800" loading="lazy" decoding="async">
+              </picture>
+            </figure>
           -->
           <figure class="shot shot-16-10 shot--shop"></figure>
 

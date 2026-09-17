@@ -22,6 +22,7 @@ const SLOTS = [
   { name: 'service-silver', from: 'eclipse-solaire-collar.jpg', width: 800, ratio: 3 / 2 },
   { name: 'service-result', from: 'showcase-bangle.jpg', width: 800, ratio: 3 / 2 },
   { name: 'machine', from: 'machine.jpg', width: 1280, ratio: 16 / 10 },
+  { name: 'shopfront', from: 'shopfront.jpg', width: 1280, ratio: 16 / 10 },
 ];
 
 const kb = n => `${(n / 1024).toFixed(0)} kB`;
