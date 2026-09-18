@@ -3,609 +3,942 @@
 
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>AURUM & CO. | Haute Joaillerie & High Fine Jewellery</title>
-  <meta name="description"
-    content="Immerse in the cinematic scroll experience of AURUM Haute Joaillerie. Handcrafted pure gold and diamond masterpieces born from master goldsmiths.">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#ffffff">
+  <link rel="icon"
+    href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23c9971a' stroke-width='2' stroke-linecap='round'%3E%3Ccircle cx='11' cy='11' r='6.5'/%3E%3Cpath d='M11 7.5v7M7.5 11h7M16 16l4.5 4.5'/%3E%3C/svg%3E">
 
-  <!-- Google Fonts: Luxury Editorial Serif & Modern Sans -->
+  <title>Purity Testing Centre | Gold &amp; Silver Purity Testing</title>
+  <meta name="description"
+    content="Professional gold and silver purity testing. Bring your jewellery, coins or silver articles, see the testing process, and get your result explained in plain language.">
+  <!-- SETUP: add <link rel="canonical" href="https://your-domain.example/"> once the domain is known. -->
+
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Purity Testing Centre | Gold &amp; Silver Purity Testing">
+  <meta property="og:description"
+    content="Professional gold and silver purity testing with a transparent process and clearly explained results.">
+
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link
-    href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700;800&family=Cinzel+Decorative:wght@400;700&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Montserrat:wght@200;300;400;500;600&display=swap"
-    rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 
-  <link rel="stylesheet" href="./style.css">
+  <!-- Marks JS as available so scroll-reveal never hides content when it is not. -->
+  <script>document.documentElement.classList.add('js');</script>
+
+  <link rel="stylesheet" href="./styles.css">
+
+  <!--
+    SETUP: every value below is a placeholder. Replace them with the real
+    business details before publishing. See README.md for the full checklist.
+  -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "LocalBusiness",
+    "name": "Purity Testing Centre",
+    "description": "Gold and silver purity testing centre.",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "PLACEHOLDER - street address",
+      "addressLocality": "PLACEHOLDER - city",
+      "addressCountry": "PLACEHOLDER - country"
+    },
+    "telephone": "PLACEHOLDER - phone number",
+    "openingHours": "PLACEHOLDER - opening hours"
+  }
+  </script>
 </head>
 
 <body>
+  <a class="skip-link" href="#main">Skip to main content</a>
 
-  <!-- LUXURY PRELOADER -->
-  <div id="preloader" class="preloader">
-    <div class="preloader-content">
-      <div class="preloader-crest">
-        <svg viewBox="0 0 100 100" class="crest-svg">
-          <circle cx="50" cy="50" r="46" fill="none" stroke="url(#gold-grad-p)" stroke-width="1.2"
-            stroke-dasharray="4 6" />
-          <path d="M50 16 L54 36 L74 36 L58 48 L64 68 L50 56 L36 68 L42 48 L26 36 L46 36 Z" fill="none"
-            stroke="url(#gold-grad-p)" stroke-width="1.5" />
-          <defs>
-            <linearGradient id="gold-grad-p" x1="0%" y1="0%" x2="100%" y2="100%">
-              <stop offset="0%" stop-color="#FFF5D1" />
-              <stop offset="50%" stop-color="#D4AF37" />
-              <stop offset="100%" stop-color="#8F6B22" />
-            </linearGradient>
-          </defs>
-        </svg>
-      </div>
-      <div class="preloader-brand">AURUM &amp; CO.</div>
-      <div class="preloader-subtitle">HAUTE JOAILLERIE ATELIER</div>
-      <div class="preloader-bar-wrap">
-        <div id="preloader-bar" class="preloader-bar"></div>
-      </div>
-      <div class="preloader-status">
-        <span id="preloader-percent">0%</span>
-        <span class="preloader-note">Preparing 3D Cinematic Sequence</span>
-      </div>
-    </div>
-  </div>
-
-  <!-- FIXED LUXURY NAVIGATION -->
-  <header id="navbar" class="navbar">
-    <div class="nav-container">
-      <div class="nav-left">
-        <button class="nav-btn menu-toggle" id="menu-toggle-btn" aria-label="Open Navigation" onclick="toggleMobileMenu()">
-          <span class="menu-bar"></span>
-          <span class="menu-bar"></span>
-        </button>
-        <nav class="nav-links">
-          <a href="#collections" class="nav-link">High Jewellery</a>
-          <a href="#craftsmanship" class="nav-link">Craftsmanship</a>
-          <a href="#bespoke" class="nav-link">The Atelier</a>
-          <a href="#heritage" class="nav-link">Heritage</a>
-        </nav>
-      </div>
-
-      <a href="#" class="nav-brand">
-        <span class="brand-monogram">AURUM</span>
-        <span class="brand-origin">PARIS • GENÈVE • DUBAI</span>
+  <!-- ============ HEADER ============ -->
+  <header class="site-header" id="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="#top">
+        <span class="brand-mark" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"
+            stroke-linejoin="round">
+            <circle cx="11" cy="11" r="6.5"></circle>
+            <path d="M11 7.5v7M7.5 11h7"></path>
+            <path d="m16 16 4.5 4.5"></path>
+          </svg>
+        </span>
+        <span class="brand-text">
+          <span class="brand-name">Purity Testing Centre</span>
+          <span class="brand-sub">Gold &amp; Silver Analysis</span>
+        </span>
       </a>
 
-      <div class="nav-right">
-        <button class="nav-btn consultation-btn" onclick="openConsultationModal()" aria-label="Book VIP Appointment">
-          <span class="btn-sparkle">✦</span>
-          <span class="btn-text btn-text-desktop">VIP APPOINTMENT</span>
-          <span class="btn-text btn-text-mobile">VIP</span>
-        </button>
-      </div>
+      <nav class="site-nav" id="site-nav" aria-label="Main">
+        <ul class="nav-list">
+          <li><a href="#services">Services</a></li>
+          <li><a href="#process">How it works</a></li>
+          <li><a href="#technology">The testing</a></li>
+          <li><a href="#purity">Purity guide</a></li>
+          <li><a href="#faq">FAQ</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+        <a class="btn btn-primary btn-sm nav-cta" href="#contact">Get tested</a>
+      </nav>
+
+      <button class="nav-toggle" id="nav-toggle" aria-expanded="false" aria-controls="site-nav" aria-label="Open menu">
+        <span class="nav-toggle-bar"></span>
+        <span class="nav-toggle-bar"></span>
+      </button>
     </div>
   </header>
 
-  <!-- MOBILE LUXURY NAVIGATION DRAWER -->
-  <div id="mobile-menu" class="mobile-menu-drawer" aria-hidden="true">
-    <div class="mobile-menu-backdrop" onclick="closeMobileMenu()"></div>
-    <div class="mobile-menu-panel">
-      <div class="mobile-menu-header">
-        <div class="mobile-brand">
-          <span class="brand-monogram">AURUM</span>
-          <span class="brand-origin">HAUTE JOAILLERIE</span>
-        </div>
-        <button class="mobile-close-btn" onclick="closeMobileMenu()" aria-label="Close Menu">&times;</button>
-      </div>
-      <nav class="mobile-menu-nav">
-        <a href="#collections" class="mobile-nav-link" onclick="closeMobileMenu()">
-          <span class="m-link-num">01</span>
-          <span class="m-link-text">High Jewellery</span>
-        </a>
-        <a href="#craftsmanship" class="mobile-nav-link" onclick="closeMobileMenu()">
-          <span class="m-link-num">02</span>
-          <span class="m-link-text">Craftsmanship</span>
-        </a>
-        <a href="#bespoke" class="mobile-nav-link" onclick="closeMobileMenu()">
-          <span class="m-link-num">03</span>
-          <span class="m-link-text">The Atelier</span>
-        </a>
-        <a href="#heritage" class="mobile-nav-link" onclick="closeMobileMenu()">
-          <span class="m-link-num">04</span>
-          <span class="m-link-text">Heritage &amp; Press</span>
-        </a>
-      </nav>
-      <div class="mobile-menu-footer">
-        <button class="mobile-vip-btn" onclick="closeMobileMenu(); openConsultationModal()">
-          <span class="btn-sparkle">✦</span>
-          <span>VIP APPOINTMENT</span>
-        </button>
-        <div class="mobile-menu-meta">
-          <p class="m-cities">PARIS • GENÈVE • DUBAI</p>
-          <p class="m-seal">AU 999.9 24K FINE GOLD</p>
-        </div>
-      </div>
-    </div>
-  </div>
+  <main id="main">
+    <span id="top"></span>
 
-  <!-- ======================================================== -->
-  <!-- HERO SCROLL CONTAINER (550vh tall to drive 300 frames)   -->
-  <!-- ======================================================== -->
-  <section id="hero" class="hero-scroll-container">
-    <div id="hero-sticky" class="hero-sticky-viewport">
-
-      <!-- Background Ambient Glow & Vignette -->
-      <div class="hero-ambient-glow"></div>
-      <div class="hero-vignette"></div>
-
-      <!-- Canvas for Floating Gold Stardust Particles -->
-      <canvas id="particles-canvas" class="particles-canvas"></canvas>
-
-      <!-- Main High-Definition Canvas for 300 Frames -->
-      <canvas id="hero-canvas" class="hero-canvas"></canvas>
-
-      <!-- CINEMATIC TEXT OVERLAYS (Controlled by Frame ranges) -->
-      <div class="hero-overlay-layer">
-
-        <!-- Frame 001 - 060: TIMELESS -->
-        <div id="hero-text-1" class="hero-text-block">
-          <div class="gold-emboss-tag">HAUTE ORFEVRERIE</div>
-          <h1 class="hero-title">TIMELESS</h1>
-          <div class="gold-divider-line"></div>
-          <p class="hero-subtitle">Crafted for moments that matter.</p>
-        </div>
-
-        <!-- Frame 061 - 130: ELEGANCE -->
-        <div id="hero-text-2" class="hero-text-block">
-          <div class="gold-emboss-tag">PURE 24K ARCHITECTURE</div>
-          <h1 class="hero-title">ELEGANCE</h1>
-          <div class="gold-divider-line"></div>
-          <p class="hero-subtitle">Designed to shine beyond time.</p>
-        </div>
-
-        <!-- Frame 131 - 210: CRAFTED IN GOLD -->
-        <div id="hero-text-3" class="hero-text-block">
-          <div class="gold-emboss-tag">THE ALCHEMY OF LIGHT</div>
-          <h1 class="hero-title">CRAFTED IN GOLD</h1>
-          <div class="gold-divider-line"></div>
-          <p class="hero-subtitle">Where craftsmanship becomes art.</p>
-        </div>
-
-        <!-- Frame 211 - 270: MADE TO BE REMEMBERED -->
-        <div id="hero-text-4" class="hero-text-block">
-          <div class="gold-emboss-tag">SOLITAIRE MASTERPIECE</div>
-          <h1 class="hero-title">MADE TO BE REMEMBERED</h1>
-          <div class="gold-divider-line"></div>
-          <p class="hero-subtitle">Hand-sculpted brilliance for eternity.</p>
-        </div>
-
-      </div>
-
-      <!-- MINIMALIST LUXURY HUD -->
-      <div class="hero-hud">
-        <div class="hud-right">
-          <div class="purity-badge">
-            <span class="gold-seal">AU 999.9</span>
-            <span class="purity-text">24K SOLID GOLD</span>
-          </div>
-        </div>
-      </div>
-
-      <!-- TRANSITION CUE TO MAIN WEBSITE (Visible near frame 300) -->
-      <div id="hero-transition-cue" class="hero-transition-cue">
-        <div class="glow-beam"></div>
-        <span class="transition-title">ENTERING THE MAISON</span>
-        <svg class="chevron-down" viewBox="0 0 24 24" width="20" height="20">
-          <path d="M7 10l5 5 5-5" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
-            stroke-linejoin="round" />
-        </svg>
-      </div>
-
-    </div>
-  </section>
-
-  <!-- ======================================================== -->
-  <!-- MAIN WEBSITE EXPERIENCE (Seamless luxury content flow)   -->
-  <!-- ======================================================== -->
-  <main id="main-content" class="main-content">
-
-    <!-- INTRO STATEMENT: LUXURY COMMERCIAL -> WEBSITE TRANSITION -->
-    <section class="intro-statement-section">
-      <div class="container-narrow">
-        <div class="section-crest">
-          <span class="crest-dot"></span>
-          <span class="crest-line"></span>
-          <span class="crest-text">THE ATELIER MANIFESTO</span>
-          <span class="crest-line"></span>
-          <span class="crest-dot"></span>
-        </div>
-        <h2 class="editorial-quote">
-          “True luxury is never loud. It whispers in the weight of pure gold, the silence of flawless diamonds, and the
-          soul of the master who shaped it.”
-        </h2>
-        <div class="artisan-signature">
-          <span class="signature-name">Jean-Luc Aurélien</span>
-          <span class="signature-role">Master Goldsmith &amp; Creative Director</span>
-        </div>
-      </div>
-    </section>
-
-    <!-- HAUTE JOAILLERIE COLLECTIONS -->
-    <section id="collections" class="collections-section">
-      <div class="container">
-
-        <div class="section-header text-center">
-          <div class="gold-kicker">HAUTE SÉLECTION</div>
-          <h2 class="section-title">Iconic Creations</h2>
-          <p class="section-description">
-            Each creation requires over 120 hours of delicate goldsmithing, handset with conflict-free, certified
-            natural diamonds.
+    <!-- ============ HERO ============ -->
+    <section class="hero">
+      <div class="container hero-inner">
+        <div class="hero-copy reveal">
+          <p class="eyebrow">Gold &amp; silver purity testing</p>
+          <h1>Know the true purity of your gold.</h1>
+          <p class="lede">
+            Professional purity testing for jewellery, coins, bars and silver articles — with a process
+            you can watch and a result explained in plain language.
           </p>
 
-          <!-- Category Filter Tabs -->
-          <div class="filter-tabs">
-            <button class="filter-btn active" data-filter="all">All Masterpieces</button>
-            <button class="filter-btn" data-filter="necklaces">Collars &amp; Pendants</button>
-            <button class="filter-btn" data-filter="rings">Solitaire Rings</button>
-            <button class="filter-btn" data-filter="bracelets">Sculpted Cuffs</button>
+          <div class="hero-actions">
+            <a class="btn btn-primary" href="#contact">
+              Check your gold purity
+              <svg class="btn-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="M5 12h14M13 6l6 6-6 6"></path>
+              </svg>
+            </a>
+            <!-- SETUP: replace the WhatsApp number in the link below. -->
+            <a class="btn btn-ghost" href="https://wa.me/91XXXXXXXXXX?text=Hello%2C%20I%20would%20like%20to%20know%20more%20about%20gold%20purity%20testing."
+              target="_blank" rel="noopener">
+              WhatsApp us
+            </a>
           </div>
+
+          <ul class="hero-points">
+            <li>Bring your item in person</li>
+            <li>Watch the testing process</li>
+            <li>Result explained before you leave</li>
+          </ul>
         </div>
 
-        <!-- Product Grid -->
-        <div class="products-grid">
-
-          <!-- Product Card 1 -->
-          <div class="product-card" data-category="necklaces">
-            <div class="card-image-wrap">
-              <div class="gold-badge">SIGNATURE</div>
-              <div class="card-media-box">
-                <img src="./images/eclipse-solaire-collar.jpg" alt="L’Éclipse Solaire Necklace" class="product-thumb-image" loading="lazy">
-                <div class="card-glow"></div>
-                <div class="card-shimmer-sweep"></div>
-              </div>
-              <div class="card-actions">
-                <button class="quick-view-btn"
-                  onclick="openProductModal('L’Éclipse Solaire Necklace', '$48,500', 'Handcrafted 18k Honey Gold with 4.80 ct Pavé Diamonds', 'necklace', './images/eclipse-solaire-collar.jpg')">Quick
-                  View</button>
-              </div>
-            </div>
-            <div class="card-details">
-              <span class="card-category">HAUTE COLLAR</span>
-              <h3 class="card-title">L’Éclipse Solaire</h3>
-              <p class="card-specs">18K Honey Gold • 4.80 ct VVS Diamonds</p>
-              <div class="card-price">$48,500</div>
-            </div>
+        <!-- Gold item under analysis + illustrative result card -->
+        <div class="hero-visual reveal">
+          <div class="specimen">
+            <!--
+              PHOTO SLOT — hero. To use your own photo instead, drop it into
+              images/source/ and run `npm run images` (see images/README.md).
+            -->
+            <figure class="shot shot--item">
+              <picture>
+                <source srcset="./images/hero-item.webp" type="image/webp">
+                <img src="./images/hero-item.jpg" alt="A gold ring resting on dark cloth, ready for purity testing"
+                  width="1100" height="825" fetchpriority="high" decoding="async">
+              </picture>
+            </figure>
+            <span class="specimen-scan" aria-hidden="true"></span>
+            <span class="specimen-tag">Analysing</span>
           </div>
 
-          <!-- Product Card 2 -->
-          <div class="product-card" data-category="rings">
-            <div class="card-image-wrap">
-              <div class="gold-badge">BESPOKE</div>
-              <div class="card-media-box">
-                <img src="./images/solitaire-imperial-ring.jpg" alt="Le Solitaire Impérial Ring" class="product-thumb-image" loading="lazy">
-                <div class="card-glow"></div>
-                <div class="card-shimmer-sweep"></div>
+          <figure class="result-card">
+            <figcaption class="result-head">
+              <span class="result-title">Purity analysis</span>
+              <span class="badge">Illustrative example</span>
+            </figcaption>
+
+            <dl class="result-rows">
+              <div class="result-row">
+                <dt>Item</dt>
+                <dd>Gold ring</dd>
               </div>
-              <div class="card-actions">
-                <button class="quick-view-btn"
-                  onclick="openProductModal('Le Solitaire Impérial Ring', '$62,000', '24k Pure Gold Architecture with 3.20 ct D-Flawless Center Emerald Cut', 'ring', './images/solitaire-imperial-ring.jpg')">Quick
-                  View</button>
+              <div class="result-row">
+                <dt>Result</dt>
+                <dd class="result-strong">18K</dd>
               </div>
-            </div>
-            <div class="card-details">
-              <span class="card-category">SOLITAIRE COLLECTION</span>
-              <h3 class="card-title">Le Solitaire Impérial</h3>
-              <p class="card-specs">24K Solid Gold • 3.20 ct D-Flawless</p>
-              <div class="card-price">$62,000</div>
-            </div>
-          </div>
-
-          <!-- Product Card 3 -->
-          <div class="product-card" data-category="bracelets">
-            <div class="card-image-wrap">
-              <div class="gold-badge">LIMITED EDITION</div>
-              <div class="card-media-box">
-                <img src="./images/sovereign-fluted-cuff.jpg" alt="Sovereign Fluted Cuff" class="product-thumb-image" loading="lazy">
-                <div class="card-glow"></div>
-                <div class="card-shimmer-sweep"></div>
+              <div class="result-row">
+                <dt>Approx. gold content</dt>
+                <dd>75.0%</dd>
               </div>
-              <div class="card-actions">
-                <button class="quick-view-btn"
-                  onclick="openProductModal('Sovereign Fluted Cuff', '$34,200', 'Solid 22k Sculpted Yellow Gold Cuff with Florentine Finish', 'bracelet', './images/sovereign-fluted-cuff.jpg')">Quick
-                  View</button>
-              </div>
+            </dl>
+
+            <div class="result-meter" role="img" aria-label="Approximately 75 percent gold content">
+              <div class="result-meter-fill" style="--fill: 75%"></div>
             </div>
-            <div class="card-details">
-              <span class="card-category">SCULPTED CUFF</span>
-              <h3 class="card-title">Sovereign Fluted Cuff</h3>
-              <p class="card-specs">22K Hand-Chiseled Gold • Florentine Texture</p>
-              <div class="card-price">$34,200</div>
-            </div>
-          </div>
 
-          <!-- Product Card 4 -->
-          <div class="product-card" data-category="rings">
-            <div class="card-image-wrap">
-              <div class="gold-badge">ONE OF A KIND</div>
-              <div class="card-media-box">
-                <img src="./images/aeterna-pave-band.jpg" alt="Aeterna Pavé Band" class="product-thumb-image" loading="lazy">
-                <div class="card-glow"></div>
-                <div class="card-shimmer-sweep"></div>
-              </div>
-              <div class="card-actions">
-                <button class="quick-view-btn"
-                  onclick="openProductModal('Aeterna Pavé Band', '$21,800', 'Continuous Band of French Cut Diamonds in Platinum and 18K Yellow Gold', 'ring', './images/aeterna-pave-band.jpg')">Quick
-                  View</button>
-              </div>
-            </div>
-            <div class="card-details">
-              <span class="card-category">ETERNITY BAND</span>
-              <h3 class="card-title">Aeterna Pavé Band</h3>
-              <p class="card-specs">18K Dual Gold • French Cut Diamonds</p>
-              <div class="card-price">$21,800</div>
-            </div>
-          </div>
-
-        </div>
-
-      </div>
-    </section>
-
-    <!-- MASTER CRAFTSMANSHIP & ATELIER HERITAGE -->
-    <section id="craftsmanship" class="craftsmanship-section">
-      <div class="container">
-
-        <div class="craftsmanship-grid">
-
-          <div class="craft-content">
-            <div class="gold-kicker">METIER D'ART</div>
-            <h2 class="section-title">The Art of Lost-Wax Goldsmithing</h2>
-            <p class="craft-lead">
-              Every AURUM piece begins not on a computer screen, but in pure hand-carved jeweler's wax.
+            <p class="result-status">
+              <span class="dot" aria-hidden="true"></span>
+              Analysis complete
             </p>
-            <p class="craft-text">
-              Our master goldsmiths shape organic contours, testing weight and ergonomic balance against the human form.
-              When molten gold at 1,064°C replaces the wax, a seamless sculptural jewel emerges—free of soldering seams
-              and imbued with immortal warmth.
+            <p class="result-note">
+              Sample layout only. It does not represent a real customer result.
             </p>
+          </figure>
+        </div>
+      </div>
+    </section>
 
-            <!-- Interactive Pillars -->
-            <div class="craft-pillars">
-              <div class="pillar-item">
-                <div class="pillar-number">01</div>
-                <div class="pillar-info">
-                  <h4>Ethical Fairmined Gold</h4>
-                  <p>100% traceable, sustainably extracted precious metals refined to 999.9 purity.</p>
-                </div>
-              </div>
+    <!-- ============ TRUST BAR ============ -->
+    <section class="trustbar" aria-label="What to expect">
+      <div class="container trustbar-inner">
+        <span>Professional testing</span>
+        <span>Transparent process</span>
+        <span>Modern equipment</span>
+        <span>Clear results</span>
+      </div>
+    </section>
 
-              <div class="pillar-item">
-                <div class="pillar-number">02</div>
-                <div class="pillar-info">
-                  <h4>Florentine Hand Chasing</h4>
-                  <p>Microscopic incisions hand-graved with tempered steel burins for velvet light refraction.</p>
-                </div>
-              </div>
+    <!-- ============ PROBLEM ============ -->
+    <section class="section" id="why">
+      <div class="container">
+        <header class="section-head reveal">
+          <p class="eyebrow">Why people test</p>
+          <h2>Do you really know how pure your gold is?</h2>
+          <p class="section-lede">
+            Jewellery can look perfect and still leave you unsure about what it actually contains.
+            Testing replaces an assumption with a measurement.
+          </p>
+        </header>
 
-              <div class="pillar-item">
-                <div class="pillar-number">03</div>
-                <div class="pillar-info">
-                  <h4>Micro-Pavé Setting</h4>
-                  <p>Gems set under 40x stereoscopic magnification with mirror-polished claw tips.</p>
-                </div>
+        <div class="grid grid-4">
+          <article class="card reveal">
+            <h3>Selling old jewellery</h3>
+            <p>Understand the purity of your item before you make a decision about selling it.</p>
+          </article>
+          <article class="card reveal">
+            <h3>Inherited jewellery</h3>
+            <p>Find out what has actually been passed down to you, piece by piece.</p>
+          </article>
+          <article class="card reveal">
+            <h3>Buying or verifying</h3>
+            <p>Get independent information about an item you are evaluating before you commit.</p>
+          </article>
+          <article class="card reveal">
+            <h3>Silver articles</h3>
+            <p>Check the composition of silver jewellery, utensils and other silver items.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ SERVICES ============ -->
+    <section class="section section-alt" id="services">
+      <div class="container">
+        <header class="section-head reveal">
+          <p class="eyebrow">Services</p>
+          <h2>What we test</h2>
+          <p class="section-lede">Bring the item in and we will tell you what the test can determine for it.</p>
+        </header>
+
+        <div class="grid grid-4">
+          <article class="card card-link reveal">
+            <!--
+              PHOTO SLOT — to use your own photo, drop it into images/source/
+              and run `npm run images` (see images/README.md).
+            -->
+            <figure class="shot shot-3-2 card-shot shot--item">
+              <picture>
+                <source srcset="./images/service-gold.webp" type="image/webp">
+                <img src="./images/service-gold.jpg" alt="A gold cuff bangle of the kind brought in for testing"
+                  width="800" height="533" loading="lazy" decoding="async">
+              </picture>
+            </figure>
+            <span class="card-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"
+                stroke-linejoin="round">
+                <circle cx="12" cy="14" r="5.5"></circle>
+                <path d="M8.5 8 7 4h10l-1.5 4"></path>
+              </svg>
+            </span>
+            <h3>Gold jewellery</h3>
+            <p>Rings, chains, bracelets, necklaces, bangles and everyday ornaments.</p>
+          </article>
+
+          <article class="card card-link reveal">
+            <!--
+              PHOTO SLOT — replace with:
+              <img src="./images/service-coins.jpg" alt="Gold coins and bars brought in for testing"
+                   width="900" height="600" loading="lazy" decoding="async">
+            -->
+            <figure class="shot shot-3-2 card-shot">
+              <picture>
+                <source srcset="./images/service-coins.webp" type="image/webp">
+                <img src="./images/service-coins.jpg" alt="A gold band, photographed at the centre"
+                  width="800" height="533" loading="lazy" decoding="async">
+              </picture>
+            </figure>
+            <span class="card-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"
+                stroke-linejoin="round">
+                <rect x="3" y="14" width="18" height="6" rx="1.5"></rect>
+                <rect x="6" y="8" width="12" height="6" rx="1.5"></rect>
+              </svg>
+            </span>
+            <h3>Coins &amp; bars</h3>
+            <p>Gold coins, biscuits and bars brought in for a purity check.</p>
+          </article>
+
+          <article class="card card-link reveal">
+            <!--
+              PHOTO SLOT — replace with:
+              <img src="./images/service-silver.jpg" alt="Silver articles brought in for testing"
+                   width="900" height="600" loading="lazy" decoding="async">
+            -->
+            <figure class="shot shot-3-2 card-shot">
+              <picture>
+                <source srcset="./images/service-silver.webp" type="image/webp">
+                <img src="./images/service-silver.jpg" alt="A diamond-set gold collar, photographed at the centre"
+                  width="800" height="533" loading="lazy" decoding="async">
+              </picture>
+            </figure>
+            <span class="card-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"
+                stroke-linejoin="round">
+                <path d="M4 7h16l-2.5 12h-11z"></path>
+                <path d="M9 7V5.5A3 3 0 0 1 15 5.5V7"></path>
+              </svg>
+            </span>
+            <h3>Silver items</h3>
+            <p>Silver jewellery, articles and household silver of most shapes and sizes.</p>
+          </article>
+
+          <article class="card card-link reveal">
+            <!--
+              PHOTO SLOT — replace with:
+              <img src="./images/service-result.jpg" alt="A purity result being explained to a customer"
+                   width="900" height="600" loading="lazy" decoding="async">
+            -->
+            <figure class="shot shot-3-2 card-shot">
+              <picture>
+                <source srcset="./images/service-result.webp" type="image/webp">
+                <img src="./images/service-result.jpg" alt="A gold bangle presented for assessment"
+                  width="800" height="533" loading="lazy" decoding="async">
+              </picture>
+            </figure>
+            <span class="card-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"
+                stroke-linejoin="round">
+                <path d="M4 19h16"></path>
+                <path d="M7 19V9m5 10V5m5 14v-7"></path>
+              </svg>
+            </span>
+            <h3>Purity &amp; composition</h3>
+            <p>The karat or percentage reading for your item, explained so it is easy to act on.</p>
+          </article>
+        </div>
+
+        <p class="section-cta reveal">
+          <a class="link-cta" href="#contact">Test your item
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+              stroke-linejoin="round" aria-hidden="true">
+              <path d="M5 12h14M13 6l6 6-6 6"></path>
+            </svg>
+          </a>
+        </p>
+      </div>
+    </section>
+
+    <!-- ============ HOW IT WORKS ============ -->
+    <section class="section" id="process">
+      <div class="container">
+        <header class="section-head reveal">
+          <p class="eyebrow">How it works</p>
+          <h2>From item to result — a simple process</h2>
+          <p class="section-lede">Four steps, start to finish, usually while you wait.</p>
+        </header>
+
+        <ol class="steps">
+          <li class="step reveal">
+            <span class="step-num">01</span>
+            <h3>Bring your item</h3>
+            <p>Walk in with your gold or silver item. Nothing needs to be prepared in advance.</p>
+          </li>
+          <li class="step reveal">
+            <span class="step-num">02</span>
+            <h3>Item examination</h3>
+            <p>The piece is checked and prepared according to the testing procedure.</p>
+          </li>
+          <li class="step reveal">
+            <span class="step-num">03</span>
+            <h3>Purity analysis</h3>
+            <p>The item is analysed using the equipment available at the centre.</p>
+          </li>
+          <li class="step reveal">
+            <span class="step-num">04</span>
+            <h3>Understand your result</h3>
+            <p>We show the reading and explain what it means for your item.</p>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- ============ TECHNOLOGY ============ -->
+    <section class="section section-alt" id="technology">
+      <div class="container">
+        <header class="section-head reveal">
+          <p class="eyebrow">The testing</p>
+          <h2>How your item is tested</h2>
+          <p class="section-lede">
+            The equipment does the reading; our job is to run it properly and explain what comes
+            back. You can watch the whole thing happen.
+          </p>
+        </header>
+
+        <div class="split">
+          <div class="reveal">
+            <!--
+              PHOTO SLOT — your testing machine. This is a DRAWING, not a photograph.
+              To use a real photo: put it in images/source/machine.jpg, run
+              `npm run images`, then replace this whole <figure> with:
+              <figure class="shot shot-16-10 shot--zoom">
+                <picture>
+                  <source srcset="./images/machine.webp" type="image/webp">
+                  <img src="./images/machine.jpg" alt="The testing machine at the centre"
+                    width="1280" height="800" loading="lazy" decoding="async">
+                </picture>
+              </figure>
+            -->
+            <figure class="shot shot-16-10 shot--zoom">
+              <svg class="shot-art" viewBox="0 0 1280 800" preserveAspectRatio="xMidYMid slice"
+                  role="img" aria-label="Illustration of a handheld purity testing device">
+                <defs>
+                  <linearGradient id="mc-bg" x1="0" y1="0" x2="1" y2="1">
+                    <stop offset="0" stop-color="#e5b44a"/>
+                    <stop offset=".42" stop-color="#d09a22"/>
+                    <stop offset="1" stop-color="#9a6d15"/>
+                  </linearGradient>
+                  <linearGradient id="mc-beam" x1="0" y1="0" x2="1" y2="0">
+                    <stop offset="0" stop-color="#fff8e2" stop-opacity="0"/>
+                    <stop offset=".5" stop-color="#fffdf4" stop-opacity=".72"/>
+                    <stop offset="1" stop-color="#fff8e2" stop-opacity="0"/>
+                  </linearGradient>
+                  <linearGradient id="mc-body" x1="0" y1="0" x2="1" y2=".4">
+                    <stop offset="0" stop-color="#8a6413"/>
+                    <stop offset=".12" stop-color="#e3c074"/>
+                    <stop offset=".38" stop-color="#c49a33"/>
+                    <stop offset=".66" stop-color="#e8cb8a"/>
+                    <stop offset=".88" stop-color="#a87c1c"/>
+                    <stop offset="1" stop-color="#7a570f"/>
+                  </linearGradient>
+                  <linearGradient id="mc-screen" x1="0" y1="0" x2=".7" y2="1">
+                    <stop offset="0" stop-color="#3b4048"/>
+                    <stop offset=".35" stop-color="#20242a"/>
+                    <stop offset="1" stop-color="#0d0f12"/>
+                  </linearGradient>
+                  <linearGradient id="mc-gloss" x1="0" y1="0" x2="1" y2="1">
+                    <stop offset="0" stop-color="#fff" stop-opacity=".18"/>
+                    <stop offset=".45" stop-color="#fff" stop-opacity=".03"/>
+                    <stop offset="1" stop-color="#fff" stop-opacity="0"/>
+                  </linearGradient>
+                  <radialGradient id="mc-glow" cx=".28" cy=".2" r=".7">
+                    <stop offset="0" stop-color="#fff3d0" stop-opacity=".55"/>
+                    <stop offset="1" stop-color="#fff3d0" stop-opacity="0"/>
+                  </radialGradient>
+                  <filter id="mc-shadow" x="-40%" y="-40%" width="190%" height="190%">
+                    <feDropShadow dx="26" dy="16" stdDeviation="22" flood-color="#4a3208" flood-opacity=".45"/>
+                  </filter>
+                </defs>
+
+                <rect width="1280" height="800" fill="url(#mc-bg)"/>
+                <rect width="1280" height="800" fill="url(#mc-glow)"/>
+                <path d="M-140 800 L250 -60 L470 -60 L80 800 Z" fill="url(#mc-beam)" opacity=".85"/>
+
+                <g filter="url(#mc-shadow)">
+                  <!-- top sensor -->
+                  <rect x="612" y="132" width="56" height="30" rx="10" fill="#7e5a12"/>
+                  <ellipse cx="640" cy="134" rx="28" ry="7" fill="#d8b158"/>
+                  <ellipse cx="640" cy="134" rx="16" ry="4" fill="#4a3a16"/>
+
+                  <!-- side buttons -->
+                  <rect x="494" y="286" width="14" height="54" rx="7" fill="#a67c1e"/>
+                  <rect x="494" y="352" width="14" height="34" rx="7" fill="#a67c1e"/>
+                  <rect x="772" y="300" width="14" height="66" rx="7" fill="#8e6715"/>
+
+                  <!-- body -->
+                  <rect x="502" y="158" width="276" height="484" rx="28" fill="url(#mc-body)"/>
+                  <rect x="502" y="158" width="276" height="484" rx="28" fill="none"
+                    stroke="#fdf3d5" stroke-opacity=".35" stroke-width="2"/>
+
+                  <!-- speaker slot -->
+                  <rect x="602" y="188" width="76" height="11" rx="5.5" fill="#6d4e10"/>
+
+                  <!-- screen -->
+                  <rect x="530" y="222" width="220" height="356" rx="14" fill="#5d440f"/>
+                  <rect x="536" y="228" width="208" height="344" rx="11" fill="url(#mc-screen)"/>
+                  <path d="M536 228h208v120L536 468z" fill="url(#mc-gloss)"/>
+
+                  <!-- corner screws -->
+                  <g fill="#8a6413">
+                    <circle cx="524" cy="186" r="8"/>
+                    <circle cx="756" cy="186" r="8"/>
+                    <circle cx="524" cy="614" r="8"/>
+                    <circle cx="756" cy="614" r="8"/>
+                  </g>
+                  <g fill="#e3c074" opacity=".7">
+                    <circle cx="524" cy="184" r="4"/>
+                    <circle cx="756" cy="184" r="4"/>
+                    <circle cx="524" cy="612" r="4"/>
+                    <circle cx="756" cy="612" r="4"/>
+                  </g>
+
+                  <!-- lower bezel line -->
+                  <rect x="592" y="596" width="96" height="8" rx="4" fill="#8a6413" opacity=".8"/>
+                </g>
+              </svg>
+            </figure>
+          </div>
+
+          <div class="split-panel tech-panel reveal">
+            <h3 class="panel-title">From item to reading</h3>
+            <ol class="mini-steps">
+              <li><span>01</span> Scan — the item is read by the equipment</li>
+              <li><span>02</span> Analyse — the reading is worked out</li>
+              <li><span>03</span> Interpret — we check it against the karat scale</li>
+              <li><span>04</span> Result — you are shown the figure and what it means</li>
+            </ol>
+            <p class="tech-note">
+              SETUP: name the testing method your centre actually uses here, and say plainly
+              whether the item is affected by it. Nothing about the method is claimed until you
+              confirm it.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ PURITY GUIDE ============ -->
+    <section class="section" id="purity">
+      <div class="container">
+        <header class="section-head reveal">
+          <p class="eyebrow">Purity guide</p>
+          <h2>Understanding gold purity</h2>
+          <p class="section-lede">
+            Karat describes how much of an item is gold by mass. Select a karat to see what it means.
+          </p>
+        </header>
+
+        <div class="purity reveal">
+          <div class="purity-tabs" role="tablist" aria-label="Gold purity levels">
+            <button class="purity-tab is-active" role="tab" id="tab-24k" aria-controls="purity-panel"
+              aria-selected="true" data-karat="24K" data-percent="99.9"
+              data-text="Fine gold. Very soft in this form, so it is more commonly seen in coins and bars than in everyday jewellery.">24K</button>
+            <button class="purity-tab" role="tab" id="tab-22k" aria-controls="purity-panel" aria-selected="false"
+              tabindex="-1" data-karat="22K" data-percent="91.6"
+              data-text="Approximately 91.6% gold by mass under the conventional karat calculation. Widely used for jewellery.">22K</button>
+            <button class="purity-tab" role="tab" id="tab-18k" aria-controls="purity-panel" aria-selected="false"
+              tabindex="-1" data-karat="18K" data-percent="75"
+              data-text="Approximately 75% gold by mass. Harder than higher karats, which suits detailed and stone-set designs.">18K</button>
+            <button class="purity-tab" role="tab" id="tab-14k" aria-controls="purity-panel" aria-selected="false"
+              tabindex="-1" data-karat="14K" data-percent="58.5"
+              data-text="Approximately 58.5% gold by mass. Often chosen for durability in pieces worn every day.">14K</button>
+          </div>
+
+          <div class="purity-panel" id="purity-panel" role="tabpanel" aria-labelledby="tab-24k" tabindex="0">
+            <div class="purity-figure">
+              <span class="purity-karat" id="purity-karat">24K</span>
+              <span class="purity-percent"><span id="purity-percent">99.9</span>% gold by mass</span>
+            </div>
+            <div class="purity-body">
+              <p class="purity-meter-label">
+                <span>Gold by mass</span>
+                <span id="purity-meter-value">99.9%</span>
+              </p>
+              <div class="purity-meter">
+                <div class="purity-meter-fill" id="purity-fill" style="--fill: 99.9%"></div>
               </div>
+              <p id="purity-text">
+                Fine gold. Very soft in this form, so it is more commonly seen in coins and bars than in everyday
+                jewellery.
+              </p>
+              <p class="purity-foot">
+                Figures are the conventional karat values. Your result is the reading taken from your own item.
+              </p>
             </div>
           </div>
-
-          <div class="craft-visual">
-            <div class="visual-frame">
-              <div class="visual-badge">EST. 1928 • VALENZA</div>
-              <div class="visual-art-display">
-                <div class="goldsmith-crucible">
-                  <div class="molten-core"></div>
-                  <div class="gold-sparkles"></div>
-                </div>
-                <div class="visual-quote">
-                  <span class="v-quote-mark">“</span>
-                  Gold is sunlight distilled into earthly permanence.
-                </div>
-              </div>
-              <div class="gold-metrics">
-                <div class="metric">
-                  <span class="m-val">100%</span>
-                  <span class="m-label">Certified Recycled Gold</span>
-                </div>
-                <div class="metric">
-                  <span class="m-val">120h</span>
-                  <span class="m-label">Handwork Per Piece</span>
-                </div>
-                <div class="metric">
-                  <span class="m-val">VVS1</span>
-                  <span class="m-label">Minimum Gem Clarity</span>
-                </div>
-              </div>
-            </div>
-          </div>
-
         </div>
 
+        <p class="section-cta reveal">
+          <a class="link-cta" href="#contact">Get your gold tested
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+              stroke-linejoin="round" aria-hidden="true">
+              <path d="M5 12h14M13 6l6 6-6 6"></path>
+            </svg>
+          </a>
+        </p>
       </div>
     </section>
 
-    <!-- BESPOKE APPOINTMENT & VIP CONCIERGE -->
-    <section id="bespoke" class="bespoke-section">
-      <div class="container">
-        <div class="bespoke-card">
-          <div class="bespoke-inner">
-            <div class="gold-kicker">HAUTE SUR MESURE</div>
-            <h2 class="section-title">Schedule a Private Atelier Viewing</h2>
-            <p class="bespoke-desc">
-              Whether you desire a bespoke high jewellery commission or an intimate presentation in our private salon,
-              our master jewelers are at your disposal.
-            </p>
+    <!-- ============ TRANSPARENCY / WHY US ============ -->
+    <section class="section section-alt" id="transparency">
+      <div class="container split">
+        <div class="split-copy reveal">
+          <p class="eyebrow">Transparency</p>
+          <h2>No guesswork. Understand your gold.</h2>
+          <p class="section-lede">
+            You should leave knowing three things: what was tested, what the number means, and what your
+            options are. We keep the explanation short and free of jargon.
+          </p>
+          <ul class="check-list">
+            <li>You see which item was tested and how</li>
+            <li>The reading is shown to you directly</li>
+            <li>The result is explained in simple language</li>
+            <li>You decide what to do next — there is no pressure to sell</li>
+          </ul>
+        </div>
 
-            <form class="bespoke-form" onsubmit="handleConsultationSubmit(event)">
-              <div class="form-row">
-                <div class="form-group">
-                  <label for="b-name">FULL NAME</label>
-                  <input type="text" id="b-name" required placeholder="e.g. Lady Vivienne Montgomery">
-                </div>
-                <div class="form-group">
-                  <label for="b-email">EMAIL ADDRESS</label>
-                  <input type="email" id="b-email" required placeholder="name@domain.com">
-                </div>
-              </div>
-
-              <div class="form-row">
-                <div class="form-group">
-                  <label for="b-location">PREFERRED SALON</label>
-                  <select id="b-location">
-                    <option value="paris">Paris — Place Vendôme</option>
-                    <option value="geneve">Genève — Rue du Rhône</option>
-                    <option value="london">London — New Bond Street</option>
-                    <option value="newyork">New York — 5th Avenue</option>
-                    <option value="dubai">Dubai — DIFC Private Salon</option>
-                  </select>
-                </div>
-                <div class="form-group">
-                  <label for="b-interest">INTEREST</label>
-                  <select id="b-interest">
-                    <option value="bespoke">Bespoke Custom Commission</option>
-                    <option value="collection">Private Viewing of High Collection</option>
-                    <option value="bridal">Haute Bridal &amp; Solitaires</option>
-                  </select>
-                </div>
-              </div>
-
-              <button type="submit" class="submit-bespoke-btn">
-                <span>REQUEST PRIVATE CONSULTATION</span>
-              </button>
-            </form>
-          </div>
+        <div class="split-panel reveal">
+          <h3 class="panel-title">What to expect when you visit</h3>
+          <ol class="mini-steps">
+            <li><span>01</span> Bring your item</li>
+            <li><span>02</span> Talk to our team</li>
+            <li><span>03</span> Testing</li>
+            <li><span>04</span> Result</li>
+            <li><span>05</span> Understand your next step</li>
+          </ol>
         </div>
       </div>
     </section>
 
-    <!-- PRESS & ACCOLADES -->
-    <section class="press-section">
-      <div class="container">
-        <div class="press-track">
-          <div class="press-item">
-            <span class="press-quote">“The pinnacle of gold sculpture in modern fine jewellery.”</span>
-            <span class="press-logo">VOGUE HAUTE HORLOGERIE</span>
-          </div>
-          <div class="press-item">
-            <span class="press-quote">“AURUM has redefined how precious metal interacts with light.”</span>
-            <span class="press-logo">HARPER'S BAZAAR</span>
-          </div>
-          <div class="press-item">
-            <span class="press-quote">“A masterclass in quiet, sovereign architectural luxury.”</span>
-            <span class="press-logo">ROBB REPORT</span>
-          </div>
+    <!--
+      TESTIMONIALS / GOOGLE REVIEWS
+      Intentionally left out: only genuine, verifiable customer reviews should be
+      published here. Add the section once real reviews and a Google Business
+      Profile link are available.
+    -->
+
+    <!-- ============ FAQ ============ -->
+    <section class="section section-alt" id="faq">
+      <div class="container narrow">
+        <header class="section-head reveal">
+          <p class="eyebrow">FAQ</p>
+          <h2>Common questions</h2>
+        </header>
+
+        <div class="faq reveal">
+          <details class="faq-item">
+            <summary>What is gold purity testing?</summary>
+            <p>It is a measurement of how much gold an item actually contains, expressed as a karat value or a
+              percentage. It tells you what your piece is made of rather than what it looks like.</p>
+          </details>
+
+          <details class="faq-item">
+            <summary>Can old or inherited jewellery be tested?</summary>
+            <p>Yes. Age, wear and design do not prevent testing. Bring the piece in and we will confirm what the
+              test can determine for it.</p>
+          </details>
+
+          <details class="faq-item">
+            <summary>Can silver be tested too?</summary>
+            <p>Yes — silver jewellery and articles can be tested alongside gold items.</p>
+          </details>
+
+          <details class="faq-item">
+            <summary>How long does testing take?</summary>
+            <p>Most items are handled while you wait. <em>SETUP: replace with the centre's actual typical
+                timeframe.</em></p>
+          </details>
+
+          <details class="faq-item">
+            <summary>Does testing damage my jewellery?</summary>
+            <p><em>SETUP: answer this according to the testing method the centre actually uses, and state plainly
+                whether the item is affected.</em></p>
+          </details>
+
+          <details class="faq-item">
+            <summary>Do I need an appointment?</summary>
+            <p><em>SETUP: state the centre's actual policy on walk-ins and appointments.</em></p>
+          </details>
+
+          <details class="faq-item">
+            <summary>How much does testing cost?</summary>
+            <p>Contact us for current testing charges.</p>
+          </details>
+
+          <details class="faq-item">
+            <summary>Will I receive a report?</summary>
+            <p><em>SETUP: describe what the customer receives — a printed report, a written slip, or a verbal
+                explanation.</em></p>
+          </details>
         </div>
       </div>
     </section>
 
+    <!-- ============ LOCATION + CONTACT ============ -->
+    <section class="section" id="contact">
+      <div class="container split">
+        <div class="split-copy reveal">
+          <p class="eyebrow">Visit us</p>
+          <h2>Ready to know your gold's purity?</h2>
+          <p class="section-lede">
+            Bring your gold or silver item to the centre and understand its purity through a
+            professional testing process.
+          </p>
+
+          <div class="contact-actions">
+            <!-- SETUP: replace phone, WhatsApp and map links with real details. -->
+            <a class="btn btn-primary" href="tel:+91XXXXXXXXXX">Call now</a>
+            <a class="btn btn-ghost"
+              href="https://wa.me/91XXXXXXXXXX?text=Hello%2C%20I%20would%20like%20to%20test%20my%20gold."
+              target="_blank" rel="noopener">WhatsApp</a>
+            <a class="btn btn-ghost" href="https://www.google.com/maps/search/?api=1&amp;query=Your+business+address"
+              target="_blank" rel="noopener">Get directions</a>
+          </div>
+        </div>
+
+        <!--
+          SETUP: to show a map, paste the Google Maps embed iframe for the centre
+          directly below this comment, inside the split. Keep the "Get directions"
+          button above as the fallback when the embed is blocked.
+        -->
+        <div class="contact-col reveal">
+          <!--
+            PHOTO SLOT — your shop front / testing counter.
+            Already wired in scripts/optimise-images.mjs as `shopfront`.
+            To fill it: put the photo at images/source/shopfront.jpg, run
+            `npm run images`, then replace this comment AND the empty <figure>
+            below with exactly this block:
+
+            <figure class="shot shot-16-10 shot--zoom">
+              <picture>
+                <source srcset="./images/shopfront.webp" type="image/webp">
+                <img src="./images/shopfront.jpg" alt="The testing counter at the centre"
+                  width="1280" height="800" loading="lazy" decoding="async">
+              </picture>
+            </figure>
+          -->
+          <figure class="shot shot-16-10 shot--zoom">
+            <svg class="shot-art" viewBox="0 0 1280 800" preserveAspectRatio="xMidYMid slice"
+              role="img" aria-label="Illustration of a testing counter with an analyser, tablet and gem tray">
+              <defs>
+                <linearGradient id="ct-wall" x1="0" y1="0" x2=".7" y2="1">
+                  <stop offset="0" stop-color="#f0e0c2"/>
+                  <stop offset=".45" stop-color="#e2cca2"/>
+                  <stop offset="1" stop-color="#c2a878"/>
+                </linearGradient>
+                <linearGradient id="ct-beam" x1="0" y1="0" x2="1" y2="0">
+                  <stop offset="0" stop-color="#fffaf0" stop-opacity="0"/>
+                  <stop offset=".5" stop-color="#fffdf6" stop-opacity=".6"/>
+                  <stop offset="1" stop-color="#fffaf0" stop-opacity="0"/>
+                </linearGradient>
+                <linearGradient id="ct-top" x1="0" y1="0" x2="0" y2="1">
+                  <stop offset="0" stop-color="#fbf5e8"/>
+                  <stop offset="1" stop-color="#e8ddc8"/>
+                </linearGradient>
+                <linearGradient id="ct-front" x1="0" y1="0" x2="0" y2="1">
+                  <stop offset="0" stop-color="#d9c9a6"/>
+                  <stop offset="1" stop-color="#a68d63"/>
+                </linearGradient>
+                <linearGradient id="ct-shell" x1="0" y1="0" x2="1" y2="1">
+                  <stop offset="0" stop-color="#f2dfae"/>
+                  <stop offset=".45" stop-color="#d4ae5c"/>
+                  <stop offset="1" stop-color="#a07f2c"/>
+                </linearGradient>
+                <linearGradient id="ct-dark" x1="0" y1="0" x2="0" y2="1">
+                  <stop offset="0" stop-color="#3a3630"/>
+                  <stop offset="1" stop-color="#1b1917"/>
+                </linearGradient>
+                <linearGradient id="ct-screen" x1="0" y1="0" x2=".6" y2="1">
+                  <stop offset="0" stop-color="#eef2f6"/>
+                  <stop offset="1" stop-color="#cfd8e2"/>
+                </linearGradient>
+                <filter id="ct-soft" x="-30%" y="-30%" width="160%" height="160%">
+                  <feGaussianBlur stdDeviation="9"/>
+                </filter>
+                <filter id="ct-drop" x="-30%" y="-30%" width="170%" height="170%">
+                  <feDropShadow dx="6" dy="10" stdDeviation="9" flood-color="#5a4622" flood-opacity=".38"/>
+                </filter>
+              </defs>
+
+              <rect width="1280" height="800" fill="url(#ct-wall)"/>
+              <path d="M-120 520 L250 -60 L470 -60 L100 520 Z" fill="url(#ct-beam)"/>
+
+              <!-- background cabinetry, softly out of focus -->
+              <g filter="url(#ct-soft)" opacity=".75">
+                <rect x="40" y="150" width="330" height="14" rx="6" fill="#cbb387"/>
+                <rect x="70" y="96" width="70" height="54" rx="6" fill="#d8c49c"/>
+                <rect x="170" y="86" width="56" height="64" rx="6" fill="#e6d6b4"/>
+                <rect x="250" y="104" width="76" height="46" rx="6" fill="#cdb78d"/>
+                <rect x="0" y="300" width="380" height="160" fill="#6f5533" opacity=".55"/>
+                <rect x="120" y="332" width="86" height="60" rx="8" fill="#e3d2ae"/>
+                <rect x="226" y="326" width="70" height="66" rx="8" fill="#d6c299"/>
+                <rect x="980" y="60" width="300" height="400" rx="10" fill="#efe2c6" opacity=".7"/>
+              </g>
+
+              <!-- counter -->
+              <rect x="0" y="455" width="1280" height="120" fill="url(#ct-top)"/>
+              <g opacity=".35" stroke="#b9a37a" fill="none" stroke-width="2">
+                <path d="M60 500c90-14 180 10 270-4s150 12 240 2"/>
+                <path d="M420 540c120-10 210 8 330-6"/>
+                <path d="M840 486c130-8 220 12 330 2"/>
+              </g>
+              <rect x="0" y="575" width="1280" height="26" fill="#c9a94f" opacity=".85"/>
+              <rect x="0" y="601" width="1280" height="199" fill="url(#ct-front)"/>
+
+              <!-- analyser -->
+              <g filter="url(#ct-drop)">
+                <rect x="655" y="382" width="250" height="76" rx="14" fill="url(#ct-dark)"/>
+                <path d="M669 382h222a34 34 0 0 0 34-34v-24a34 34 0 0 0-34-34H723c-32 0-54 26-54 52z"
+                  fill="url(#ct-shell)"/>
+                <rect x="700" y="330" width="86" height="54" rx="10" fill="#241f19"/>
+                <rect x="746" y="360" width="22" height="46" rx="6" fill="#4a423a"/>
+                <ellipse cx="757" cy="406" rx="26" ry="8" fill="#2c2721"/>
+                <rect x="672" y="446" width="216" height="10" rx="5" fill="#0f0e0c" opacity=".55"/>
+              </g>
+
+              <!-- tablet -->
+              <g filter="url(#ct-drop)">
+                <rect x="916" y="290" width="188" height="150" rx="10" fill="#2b2824"/>
+                <rect x="926" y="300" width="168" height="130" rx="6" fill="url(#ct-screen)"/>
+                <g fill="#7f8b99" opacity=".85">
+                  <rect x="938" y="312" width="66" height="6" rx="3"/>
+                  <rect x="938" y="328" width="46" height="4" rx="2"/>
+                  <rect x="938" y="340" width="54" height="4" rx="2"/>
+                  <rect x="938" y="352" width="40" height="4" rx="2"/>
+                </g>
+                <rect x="1016" y="312" width="66" height="48" rx="4" fill="#b9c6d4"/>
+                <path d="M1020 352l14-16 12 10 16-22 14 18v12h-56z" fill="#6d7c8c"/>
+                <rect x="1016" y="370" width="66" height="46" rx="4" fill="#c8d3de"/>
+                <path d="M1020 410l16-14 12 8 14-18 14 14v10h-56z" fill="#77869a"/>
+                <rect x="986" y="440" width="48" height="18" rx="4" fill="#3a3630"/>
+              </g>
+
+              <!-- gem tray -->
+              <g filter="url(#ct-drop)">
+                <ellipse cx="404" cy="508" rx="86" ry="26" fill="#e7d9b8"/>
+                <ellipse cx="404" cy="503" rx="78" ry="21" fill="#f6eeda"/>
+                <g fill="#fff" stroke="#b9c3cd" stroke-width="1.5">
+                  <path d="M372 496l7-7 7 7-7 8z"/>
+                  <path d="M398 490l8-8 8 8-8 9z"/>
+                  <path d="M424 500l7-7 7 7-7 8z"/>
+                  <path d="M386 510l6-6 6 6-6 7z"/>
+                  <path d="M412 512l6-6 6 6-6 7z"/>
+                </g>
+                <circle cx="440" cy="508" r="4" fill="#23201c"/>
+              </g>
+
+              <!-- loupe and tweezers -->
+              <g filter="url(#ct-drop)">
+                <circle cx="556" cy="492" r="25" fill="none" stroke="#c9a94f" stroke-width="7"/>
+                <circle cx="556" cy="492" r="21" fill="#e9eef3" opacity=".55"/>
+                <rect x="574" y="500" width="56" height="12" rx="6" fill="#7a4f27" transform="rotate(14 574 500)"/>
+                <path d="M600 470l84 26" stroke="#b9bfc6" stroke-width="6" stroke-linecap="round"/>
+                <path d="M604 482l82 18" stroke="#cfd5db" stroke-width="5" stroke-linecap="round"/>
+                <path d="M624 520l70-6" stroke="#b9bfc6" stroke-width="5" stroke-linecap="round"/>
+              </g>
+            </svg>
+          </figure>
+
+          <address class="split-panel contact-details">
+          <h3 class="panel-title">Purity Testing Centre</h3>
+          <dl>
+            <dt>Address</dt>
+            <dd>PLACEHOLDER — street, area, city, postcode</dd>
+            <dt>Phone</dt>
+            <dd><a href="tel:+91XXXXXXXXXX">+91 XXXXX XXXXX</a></dd>
+            <dt>WhatsApp</dt>
+            <dd><a href="https://wa.me/91XXXXXXXXXX" target="_blank" rel="noopener">+91 XXXXX XXXXX</a></dd>
+            <dt>Opening hours</dt>
+            <dd>PLACEHOLDER — e.g. Mon–Sat, 10:00–19:00</dd>
+            </dl>
+          </address>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ FINAL CTA ============ -->
+    <section class="cta-band">
+      <div class="container cta-inner reveal">
+        <div>
+          <h2>Don't guess the purity of your gold.</h2>
+          <p>Bring your item in and find out exactly what you have.</p>
+        </div>
+        <div class="cta-actions">
+          <a class="btn btn-invert" href="tel:+91XXXXXXXXXX">Get your gold tested</a>
+          <a class="btn btn-outline-light"
+            href="https://wa.me/91XXXXXXXXXX?text=Hello%2C%20I%20would%20like%20to%20know%20your%20gold%20purity%20testing%20charges."
+            target="_blank" rel="noopener">WhatsApp us</a>
+        </div>
+      </div>
+    </section>
   </main>
 
-  <!-- LUXURY BRAND FOOTER -->
+  <!-- ============ FOOTER ============ -->
   <footer class="site-footer">
-    <div class="container">
-
-      <div class="footer-top">
-        <div class="footer-brand-col">
-          <div class="footer-brand">AURUM &amp; CO.</div>
-          <p class="footer-tagline">
-            Sovereign high jewellery crafted in perpetual gold. Designed in Paris, forged in Valenza.
-          </p>
-          <div class="purity-seal-small">
-            <span class="seal-icon">✦</span>
-            <span>RESPONSIBLE JEWELLERY COUNCIL CERTIFIED</span>
-          </div>
-        </div>
-
-        <div class="footer-links-col">
-          <h4 class="footer-col-title">THE MAISON</h4>
-          <ul class="footer-links">
-            <li><a href="#collections">High Jewellery</a></li>
-            <li><a href="#craftsmanship">Master Goldsmiths</a></li>
-            <li><a href="#bespoke">Bespoke Commissions</a></li>
-            <li><a href="#">The Heritage Archive</a></li>
-          </ul>
-        </div>
-
-        <div class="footer-links-col">
-          <h4 class="footer-col-title">SALONS</h4>
-          <ul class="footer-links">
-            <li><span>Place Vendôme, Paris</span></li>
-            <li><span>Rue du Rhône, Genève</span></li>
-            <li><span>New Bond St, London</span></li>
-            <li><span>5th Avenue, New York</span></li>
-            <li><span>DIFC, Dubai</span></li>
-          </ul>
-        </div>
-
-        <div class="footer-newsletter-col">
-          <h4 class="footer-col-title">PRIVATE REGISTER</h4>
-          <p class="newsletter-desc">Receive intimate invitations to private viewings and new limited creations.</p>
-          <form class="newsletter-form"
-            onsubmit="event.preventDefault(); alert('You have been enrolled in the Aurum Private Registry.');">
-            <input type="email" placeholder="Enter your email" required class="newsletter-input">
-            <button type="submit" class="newsletter-btn">JOIN</button>
-          </form>
-        </div>
+    <div class="container footer-grid">
+      <div class="footer-brand">
+        <span class="brand-name">Purity Testing Centre</span>
+        <p>Gold and silver purity testing with a transparent process and results explained in plain language.</p>
       </div>
 
-      <div class="footer-bottom">
-        <p class="copyright">© 2026 AURUM &amp; CO. ALL RIGHTS RESERVED. CRAFTED IN GOLD.</p>
-        <div class="footer-legal">
-          <a href="#">Confidentiality</a>
-          <a href="#">Provenance</a>
-          <a href="#">Ethical Sourcing</a>
-        </div>
+      <nav class="footer-col" aria-label="Footer">
+        <h4>Pages</h4>
+        <ul>
+          <li><a href="#top">Home</a></li>
+          <li><a href="#services">Services</a></li>
+          <li><a href="#process">How it works</a></li>
+          <li><a href="#technology">The testing</a></li>
+          <li><a href="#purity">Purity guide</a></li>
+          <li><a href="#faq">FAQ</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+
+      <div class="footer-col">
+        <h4>Contact</h4>
+        <ul>
+          <li><a href="tel:+91XXXXXXXXXX">+91 XXXXX XXXXX</a></li>
+          <li><a href="https://wa.me/91XXXXXXXXXX" target="_blank" rel="noopener">WhatsApp</a></li>
+          <li>PLACEHOLDER — address</li>
+          <li>PLACEHOLDER — opening hours</li>
+        </ul>
       </div>
 
+      <div class="footer-col">
+        <h4>Legal</h4>
+        <ul>
+          <li><a href="#faq">Disclaimer</a></li>
+          <li><a href="#faq">Privacy policy</a></li>
+          <li><a href="#faq">Terms</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="container footer-bottom">
+      <p>&copy; <span id="year">2026</span> Purity Testing Centre. All rights reserved.</p>
+      <p class="footer-note">Sample figures shown on this page are illustrative and are not customer results.</p>
     </div>
   </footer>
 
-  <!-- QUICK VIEW MODAL -->
-  <div id="product-modal" class="modal-backdrop">
-    <div class="modal-card">
-      <button class="modal-close" onclick="closeProductModal()">&times;</button>
-      <div class="modal-body">
-        <div class="modal-media">
-          <div id="modal-art-box" class="modal-art-box">
-            <div class="art-shimmer"></div>
-            <div class="modal-gem-icon">✦</div>
-          </div>
-        </div>
-        <div class="modal-info">
-          <span class="gold-emboss-tag">HAUTE PIECE</span>
-          <h2 id="modal-title" class="modal-title">L’Éclipse Solaire</h2>
-          <div id="modal-price" class="modal-price">$48,500</div>
-          <div class="gold-divider-line" style="margin: 16px 0;"></div>
-          <p id="modal-desc" class="modal-desc">
-            Handcrafted in 18k solid gold with brilliant round cut conflict-free natural diamonds.
-          </p>
-          <div class="modal-specs">
-            <div class="spec-row">
-              <span class="spec-label">Metal:</span>
-              <span class="spec-value">18K / 24K Solid Aurum</span>
-            </div>
-            <div class="spec-row">
-              <span class="spec-label">Hallmark:</span>
-              <span class="spec-value">French Eagle's Head &amp; Italian 750</span>
-            </div>
-            <div class="spec-row">
-              <span class="spec-label">Delivery:</span>
-              <span class="spec-value">Insured Courier in Hand-Polished Walnut Box</span>
-            </div>
-          </div>
-          <button class="modal-action-btn"
-            onclick="alert('Our concierge will reach out to facilitate your private acquisition.'); closeProductModal();">
-            ACQUIRE THIS MASTERPIECE
-          </button>
-        </div>
-      </div>
-    </div>
-  </div>
+  <!-- ============ MOBILE STICKY BAR ============ -->
+  <nav class="mobile-bar" aria-label="Quick contact">
+    <a href="tel:+91XXXXXXXXXX">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"
+        stroke-linejoin="round" aria-hidden="true">
+        <path d="M5 4h4l2 5-2.5 1.5a12 12 0 0 0 5 5L15 13l5 2v4a1 1 0 0 1-1.1 1A16 16 0 0 1 4 5.1 1 1 0 0 1 5 4z"></path>
+      </svg>
+      Call
+    </a>
+    <a href="https://wa.me/91XXXXXXXXXX?text=Hello%2C%20I%20would%20like%20to%20know%20more%20about%20gold%20purity%20testing."
+      target="_blank" rel="noopener">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"
+        stroke-linejoin="round" aria-hidden="true">
+        <path d="M4 20l1.4-4A8 8 0 1 1 8 18.6z"></path>
+      </svg>
+      WhatsApp
+    </a>
+    <a href="https://www.google.com/maps/search/?api=1&amp;query=Your+business+address" target="_blank" rel="noopener">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"
+        stroke-linejoin="round" aria-hidden="true">
+        <path d="M12 21s7-6 7-11a7 7 0 1 0-14 0c0 5 7 11 7 11z"></path>
+        <circle cx="12" cy="10" r="2.5"></circle>
+      </svg>
+      Directions
+    </a>
+  </nav>
 
-  <script type="module" src="./main.js"></script>
+  <script type="module" src="./app.js"></script>
 </body>
 
 </html>
